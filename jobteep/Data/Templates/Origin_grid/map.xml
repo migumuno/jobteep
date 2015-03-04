@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+	<page>
+		<name>default</name>
+		<title>The Jobfeel</title>
+		<description>La reinvención del curriculum.</description>
+		<keywords>curriculum, resume, the jobfeel, experiencias, formación, education, experiences, language, idiomas, skill, habilidades</keywords>
+		<layout>layouts/cv.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/welcome.php</content>
+	</page>
+	<page>
+		<name>error</name>
+		<title>The Jobfeel | Página no encontrada</title>
+		<description>La reinvención del curriculum.</description>
+		<keywords>curriculum, resume, the jobfeel, experiencias, formación, education, experiences, language, idiomas, skill, habilidades</keywords>
+		<layout>layouts/cv.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/error.php</content>
+	</page>
+</pages>

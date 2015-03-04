@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+	<page>
+		<name>default</name>
+		<title>The Jobfeel | Empresas</title>
+		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
+		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<layout>layouts/company.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/welcome.php</content>
+	</page>
+	<page>
+		<name>error</name>
+		<title>The Jobfeel | Página no encontrada</title>
+		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
+		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<layout>layouts/error.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/error.php</content>
+	</page>
+	<page>
+		<name>welcome</name>
+		<title>The Jobfeel | Empresas</title>
+		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
+		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<layout>layouts/company.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/welcome.php</content>
+	</page>
+</pages>

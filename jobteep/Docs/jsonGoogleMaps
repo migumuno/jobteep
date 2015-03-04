@@ -1,0 +1,380 @@
+Array ( 
+	[results] => Array ( 
+		[0] => Array ( 
+			[address_components] => Array (
+				[0] => Array ( 
+					[long_name] => 1A
+					[short_name] => 1A 
+					[types] => Array ( 
+						[0] => street_number 
+					) 
+				) 
+				[1] => Array ( 
+					[long_name] => Calle la Flauta MÃ¡gica 
+					[short_name] => Calle la Flauta MÃ¡gica 
+					[types] => Array ( 
+						[0] => route 
+					 ) 
+				[2] => Array ( 
+					[long_name] => Majadahonda 							
+					[short_name] => Majadahonda 
+					[types] => Array ( 
+						[0] => locality [1] => political 
+					) 
+				) 
+				[3] => Array ( 
+					[long_name] => Madrid 
+					[short_name] => M 
+					[types] => Array ( 
+						[0] => administrative_area_level_2 
+						[1] => political 
+					) 
+				) 
+				[4] => Array ( 
+					[long_name] => Community of Madrid 
+					[short_name] => Community of Madrid 
+					[types] => Array ( 
+						[0] => administrative_area_level_1 
+						[1] => political 
+					) 
+				) 
+				[5] => Array ( 
+					[long_name] => Spain 
+					[short_name] => ES 
+					[types] => Array ( 
+						[0] => country 
+						[1] => political 
+					) 
+				) 
+				[6] => Array ( 
+					[long_name] => 28222 
+					[short_name] => 28222 
+					[types] => Array ( 
+						[0] => postal_code 
+					) 
+				)
+			) 
+			[formatted_address] => Calle la Flauta MÃ¡gica, 1A, 28222 Majadahonda, Madrid, Spain 
+			[geometry] => Array ( 
+				[location] => Array ( 
+					[lat] => 40.4533688 
+					[lng] => -3.8843653 
+				) 
+				[location_type] => ROOFTOP 
+				[viewport] => Array ( 
+					[northeast] => Array ( 
+						[lat] => 40.454717780292 
+						[lng] => -3.8830163197085 
+					) 
+					[southwest] => Array ( 
+						[lat] => 40.452019819708 
+						[lng] => -3.8857142802915 
+					) 
+				) 
+			) 
+			[types] => Array ( 
+				[0] => street_address 
+			) 
+		) 
+		[1] => Array ( 
+			[address_components] => Array ( 
+				[0] => Array ( 
+					[long_name] => 28222 
+					[short_name] => 28222 
+					[types] => Array ( 
+						[0] => postal_code 
+					) 
+				) 
+				[1] => Array ( 
+					[long_name] => Majadahonda 
+					[short_name] => Majadahonda 
+					[types] => Array ( 
+						[0] => locality 
+						[1] => political 
+					) 
+				) 
+				[2] => Array ( 
+					[long_name] => Madrid 
+					[short_name] => M 
+					[types] => Array ( 
+						[0] => administrative_area_level_2 
+						[1] => political 
+					) 
+				) 
+				[3] => Array ( 
+					[long_name] => Community of Madrid 
+					[short_name] => Community of Madrid 
+					[types] => Array ( 
+						[0] => administrative_area_level_1 
+						[1] => political 
+					) 
+				) 
+				[4] => Array ( 
+					[long_name] => Spain 
+					[short_name] => ES 
+					[types] => Array ( 
+						[0] => country 
+						[1] => political 
+					) 
+				) 
+			) 
+			[formatted_address] => 28222 Majadahonda, Madrid, Spain 
+			[geometry] => Array ( 
+				[bounds] => Array ( 
+					[northeast] => Array ( 
+						[lat] => 40.5016397 
+						[lng] => -3.848613 
+					) 
+					[southwest] => Array ( 
+						[lat] => 40.4418748 
+						[lng] => -3.9450144 
+					) 
+				) 
+				[location] => Array ( 
+					[lat] => 40.4770721 
+					[lng] => -3.9164585 
+				) 
+				[location_type] => APPROXIMATE 
+				[viewport] => Array ( 
+					[northeast] => Array ( 
+						[lat] => 40.5016397 
+						[lng] => -3.848613 
+					) 
+					[southwest] => Array ( 
+						[lat] => 40.4418748 
+						[lng] => -3.9450144 
+					) 
+				) 
+			) 
+			[types] => Array ( 
+				[0] => postal_code 
+			) 
+		) 
+		[2] => Array ( 
+			[address_components] => Array ( 
+				[0] => Array ( 
+					[long_name] => Majadahonda 
+					[short_name] => Majadahonda 
+					[types] => Array ( 
+						[0] => administrative_area_level_4 
+						[1] => political 
+					) 
+				) 
+				[1] => Array ( 
+					[long_name] => Madrid 
+					[short_name] => M 
+					[types] => Array ( 
+						[0] => administrative_area_level_2 
+						[1] => political 
+					) 
+				) 
+				[2] => Array ( 
+					[long_name] => Community of Madrid 
+					[short_name] => Community of Madrid 
+					[types] => Array ( 
+						[0] => administrative_area_level_1 
+						[1] => political 
+					) 
+				) 
+				[3] => Array ( 
+					[long_name] => Spain 
+					[short_name] => ES 
+					[types] => Array ( 
+						[0] => country 
+						[1] => political 
+					) 
+				) 
+			) 	
+			[formatted_address] => Majadahonda, Madrid, Spain 
+			[geometry] => Array ( 
+				[bounds] => Array ( 
+					[northeast] => Array ( 
+						[lat] => 40.5016396 
+						[lng] => -3.8343535 
+					) 
+					[southwest] => Array ( 
+						[lat] => 40.4418748 
+						[lng] => -3.9450161 
+					) 
+				) 
+				[location] => Array ( 
+					[lat] => 40.4725828 
+					[lng] => -3.8667768 
+				) 
+				[location_type] => APPROXIMATE 
+				[viewport] => Array ( 
+					[northeast] => Array ( 
+						[lat] => 40.5016396 
+						[lng] => -3.8343535 
+					) 
+					[southwest] => Array ( 
+						[lat] => 40.4418748 
+						[lng] => -3.9450161 
+					) 
+				) 
+			) 
+			[types] => Array ( 
+				[0] => administrative_area_level_4 
+				[1] => political 
+			) 
+		) 
+		[3] => Array ( 
+			[address_components] => Array ( 
+				[0] => Array ( 
+					[long_name] => Ãrea Metropolitalitana y Corredor del Henares 
+					[short_name] => Ãrea Metropolitalitana y Corredor del Henares 
+					[types] => Array ( 
+						[0] => administrative_area_level_3 
+						[1] => political 
+					) 
+				) 
+				[1] => Array ( 
+					[long_name] => Madrid 
+					[short_name] => M 
+					[types] => Array ( 
+						[0] => administrative_area_level_2 
+						[1] => political 
+					) 
+				) 
+				[2] => Array ( 
+					[long_name] => Community of Madrid 
+					[short_name] => Community of Madrid 
+					[types] => Array ( [0] => administrative_area_level_1 [1] => political ) 
+				) 
+				[3] => Array ( [long_name] => Spain [short_name] => ES [types] => Array ( [0] => country [1] => political ) )
+			) 
+			[formatted_address] => Ãrea Metropolitalitana y Corredor del Henares, Madrid, Spain 
+			[geometry] => Array ( 
+				[bounds] => Array ( 
+					[northeast] => Array ( 
+						[lat] => 40.6453875 
+						[lng] => -3.2838978 
+					) 
+					[southwest] => Array ( 
+						[lat] => 40.1989269 
+						[lng] => -4.006454 
+					) 
+				) 
+				[location] => Array ( 
+					[lat] => 40.4955493 
+					[lng] => -3.6623239 
+				) 
+				[location_type] => APPROXIMATE 
+				[viewport] => Array ( 
+					[northeast] => Array ( [lat] => 40.6453875 [lng] => -3.2838978 ) 
+					[southwest] => Array ( [lat] => 40.1989269 [lng] => -4.006454 ) 
+				) 
+			)
+			[types] => Array ( 
+				[0] => administrative_area_level_3 
+				[1] => political 
+			) 
+		) 
+		[4] => Array ( 
+			[address_components] => Array ( 
+				[0] => Array ( 
+					[long_name] => Madrid 
+					[short_name] => M 
+					[types] => Array ( 
+						[0] => administrative_area_level_2 
+						[1] => political 
+					) 
+				) 
+				[1] => Array ( 
+					[long_name] => Community of Madrid 
+					[short_name] => Community of Madrid 
+					[types] => Array ( [0] => administrative_area_level_1 [1] => political ) 
+				) 
+				[2] => Array ( 
+					[long_name] => Spain 
+					[short_name] => ES 
+					[types] => Array ( [0] => country [1] => political ) 
+				) 
+			) 
+			[formatted_address] => Madrid, Spain 
+			[geometry] => Array ( 
+				[bounds] => Array ( 
+					[northeast] => Array ( [lat] => 41.1658447 [lng] => -3.0529833 ) 
+					[southwest] => Array ( [lat] => 39.8847195 [lng] => -4.579076 ) 
+				) 
+				[location] => Array ( [lat] => 40.4162883 [lng] => -3.7033725 ) 
+				[location_type] => APPROXIMATE 
+				[viewport] => Array ( 
+					[northeast] => Array ( [lat] => 41.1658447 [lng] => -3.0529833 ) 
+					[southwest] => Array ( [lat] => 39.8847195 [lng] => -4.579076 ) 
+				) 
+			) 
+			[types] => Array ( 
+				[0] => administrative_area_level_2 
+				[1] => political 
+			) 
+		) 
+		[5] => Array ( 
+			[address_components] => Array ( 
+				[0] => Array ( 
+					[long_name] => Community of Madrid 
+					[short_name] => Community of Madrid 
+					[types] => Array ( 
+						[0] => administrative_area_level_1 
+						[1] => political 
+					) 
+				) 
+				[1] => Array ( 
+					[long_name] => Spain 
+					[short_name] => ES 
+					[types] => Array ( 
+						[0] => country 
+						[1] => political 
+					) 
+				) 
+			)
+			[formatted_address] => Community of Madrid, Spain 
+			[geometry] => Array ( 
+				[bounds] => Array ( 
+					[northeast] => Array ( [lat] => 41.1658447 [lng] => -3.0529833 ) 
+					[southwest] => Array ( [lat] => 39.8847195 [lng] => -4.579076 ) 
+				) 
+				[location] => Array ( [lat] => 40.4167515 [lng] => -3.7038322 ) 
+				[location_type] => APPROXIMATE 
+				[viewport] => Array ( 
+					[northeast] => Array ( [lat] => 41.1658447 [lng] => -3.0529833 ) 
+					[southwest] => Array ( [lat] => 39.8847195 [lng] => -4.579076 ) 
+				) 
+			) 
+			[types] => Array ( 
+				[0] => administrative_area_level_1 
+				[1] => political 
+			) 
+		) 
+		[6] => Array ( 
+			[address_components] => Array ( 
+				[0] => Array ( 
+				[long_name] => Spain 
+				[short_name] => ES 
+				[types] => Array ( 
+					[0] => country 
+					[1] => political 
+				) 
+			) 
+		) 
+		[formatted_address] => Spain 
+		[geometry] => Array ( 
+			[bounds] => Array ( 
+				[northeast] => Array ( [lat] => 43.7923795 [lng] => 4.3277839 ) 
+				[southwest] => Array ( [lat] => 27.6377894 [lng] => -18.160788 ) 
+			) 
+			[location] => Array ( [lat] => 40.463667 [lng] => -3.74922 ) 
+			[location_type] => APPROXIMATE 
+			[viewport] => Array ( 
+				[northeast] => Array ( [lat] => 45.244 [lng] => 5.098 ) 
+				[southwest] => Array ( [lat] => 35.173 [lng] => -12.524 ) 
+			) 
+		) 
+		[types] => Array ( 
+			[0] => country 
+			[1] => political 
+		) 
+	) 
+) 
+[status] => OK 
+) 

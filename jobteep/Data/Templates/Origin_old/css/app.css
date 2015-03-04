@@ -1,0 +1,175 @@
+@CHARSET "UTF-8";
+/*----Reset CSS----*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img,
+ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, td,
+center, u, b, i {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     outline: 0;
+     font-weight: normal;
+     font-style: normal;
+     font-size: 100%;
+     font-family: inherit;
+     vertical-align: baseline
+}
+/*----Fin----*/
+
+body {
+	background-color: #ebedf2;
+	font-family: 'Aller', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Aller', sans-serif;
+}
+
+p {
+	font-family: 'Aller', sans-serif;
+}
+
+@font-face {
+font-family: Aller;
+src: url(../fonts/Aller.ttf);
+}
+
+#header {
+	width: 100%;
+	background-color: #ea5281;
+	/*background-image: url("../img/bg.png");
+	background-size: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;*/
+}
+
+#header img {
+	width: 100%;
+}
+
+#header h1 {
+	color: #ffffff;
+	text-align: left;
+}
+
+#header h3 {
+	color: #ffffff;
+}
+
+#header h4 {
+	font-weight: bold;
+	color: #33b5a6;
+}
+
+.menu {
+	text-align: center;
+}
+
+.menu ul li {
+	list-style: none;
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+	max-width: 100px;
+}
+
+.menu img {
+	width: 80px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.vcard {
+	background-color: #ffffff;
+	padding: 30px;
+}
+
+.panel {
+	background-color: #ffffff;
+}
+
+.footer {
+	height: 50px;
+}
+
+.trabajos {
+	color: #2e2964;
+	font-weight: bold;
+}
+
+.formacion {
+	color: #f14845;
+	font-weight: bold;
+}
+
+.language {
+	color: #324b5e;
+	font-weight: bold;
+}
+
+.skill {
+	color: #fc9c3d;
+	font-weight: bold;
+}
+
+.proyect {
+	color: #0595cd;
+	font-weight: bold;
+}
+
+.activity {
+	color: #ed517f;
+	font-weight: bold;
+}
+
+.intereses {
+	color: #36bfb0;
+	font-weight: bold;
+}
+
+.map {
+	color: #f76f3d;
+	font-weight: bold;
+}
+
+.item {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.clear {
+	clear: both;
+}
+
+.flag-content h3 {
+	color: #333333 !important;
+}
+
+.marcador {
+	width: 30px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.grafico {
+	width: 100%;
+	height: 100%;
+}

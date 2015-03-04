@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+	<page>
+		<name>default</name>
+		<title>JOBTeep</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/web.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/web.php</content>
+	</page>
+	<page>
+		<name>error</name>
+		<title>JobTeep | Página no encontrada</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/login.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/error.php</content>
+	</page>
+	<page>
+		<name>login</name>
+		<title>JobTeep | Login</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/web.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/web.php</content>
+	</page>
+	<page>
+		<name>adminlogin</name>
+		<title>JobTeep | Login</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/login.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/adminlogin.php</content>
+	</page>
+	<page>
+		<name>register</name>
+		<title>JobTeep | Register</title>
+		<description>Regístrate en JobTeep y reinventa tu curriculum. JobTeep es la mejor forma de vender tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/web.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/web.php</content>
+	</page>
+	<page>
+		<name>passRecover</name>
+		<title>JobTeep | Recuperar Cotraseña</title>
+		<description>Regístrate en JobTeep y reinventa tu curriculum. JobTeep es la mejor forma de vender tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/web.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/web.php</content>
+	</page>
+	<page>
+		<name>changePass</name>
+		<title>JobTeep | Cambiar Cotraseña</title>
+		<description>Regístrate en JobTeep y reinventa tu curriculum. JobTeep es la mejor forma de vender tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/web.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/web.php</content>
+	</page>
+	<page>
+		<name>admin</name>
+		<title>JobTeep | Admin</title>
+		<description>Regístrate en JobTeep y reinventa tu curriculum. JobTeep es la mejor forma de vender tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/admin.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/admin.php</content>
+	</page>
+	<page>
+		<name>privacyPolicy</name>
+		<title>JobTeep | Política de privacidad</title>
+		<description>Regístrate en JobTeep y reinventa tu curriculum. JobTeep es la mejor forma de vender tu curriculum.</description>
+		<keywords>jobteep, teep, trabajo, curriculum, adnteep</keywords>
+		<layout>layouts/docs.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/privacyPolicy.php</content>
+	</page>
+</pages>

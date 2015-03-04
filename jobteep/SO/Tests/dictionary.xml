@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+	<page>
+		<name>Experiences</name>
+		<title>Experiencias laborales</title>
+		<description>Experiencias de tu vida laboral, entendidas como trabajos en empresas.</description>
+		<keywords>experiencia, trabajo, experiencia laboral, empresas, the jobfeel, curriculum</keywords>
+		<css></css>
+		<enum>experience</enum>
+		<content>experiences.php</content>
+	</page>
+	<page>
+		<name>Add Experience</name>
+		<title>Añadir Experiencia</title>
+		<description>Añade una experiencia laboral a tu curriculum.</description>
+		<keywords>experiencia, trabajo, experiencia laboral, empresas, the jobfeel, añadir experiencia</keywords>
+		<css></css>
+		<enum>experience</enum>
+		<content>add_experience.php</content>
+	</page>
+	<page>
+		<name>Education</name>
+		<title>Formación</title>
+		<description>Estudios realizados que potencien tu experiencia, conocimientos y personalidad laboral.</description>
+		<keywords>formación, educación, cursos, carrera, grado, the jobfeel, curriculum</keywords>
+		<css></css>
+		<enum>education</enum>
+		<content>experiences.php</content>
+	</page>
+</dictionary>

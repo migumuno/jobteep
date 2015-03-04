@@ -1,0 +1,60 @@
+{
+"name": "Usuario",
+"children":
+	[
+		{
+		"name": "Trabajos",
+		"children":
+			[
+				{ "name": "Fotógrafo en Bodas de ensueño" },
+				{ "name": "Fotógrafo en Freelance" }
+			]
+		},
+		{
+		"name": "Formación",
+		"children":
+			[
+				{ "name": "Retoque fotográfico avanzado con Photoshop en CICE" },
+				{ "name": "Comunicación Audiocisual en Universidad Rey Juan Carlos" }
+			]
+		},
+		{
+		"name": "Actividades",
+		"children":
+			[
+				{ "name": "Exposición fotografía contemporanea" }
+			]
+		},
+		{
+		"name": "Proyectos",
+		"children":
+			[
+				{ "name": "Exposición fotografía contemporanea" },
+				{ "name": "Exposición fotografía contemporanea" },
+				{ "name": "Exposición fotografía contemporanea" },
+				{ "name": "Exposición fotografía contemporanea" }
+			]
+		},
+		{
+		"name": "Idiomas",
+		"children":
+			[
+				{ "name": "Inglés" },
+				{ "name": "Francés" },
+				{ "name": "Aleman" }
+			]
+		},
+		{
+		"name": "Habilidades",
+		"children":
+			[
+				{ "name": "PHP" },
+				{ "name": "HTML5" },
+				{ "name": "Photoshop" },
+				{ "name": "InDesign" },
+				{ "name": "Illustrator" },
+				{ "name": "Gimp" }
+			]
+		}
+	]
+}

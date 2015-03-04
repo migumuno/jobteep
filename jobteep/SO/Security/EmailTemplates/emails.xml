@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emails>
+	<email>
+		<name>confirm</name>
+		<subject>!Bienvenido a The Jobfeel!</subject>
+		<body>SO/Security/EmailTemplates/confirm.html</body>
+	</email>
+	<email>
+		<name>recover</name>
+		<subject>The Jobfeel - Recuperación de contraseña</subject>
+		<body>SO/Security/EmailTemplates/recover.html</body>
+	</email>
+</emails>

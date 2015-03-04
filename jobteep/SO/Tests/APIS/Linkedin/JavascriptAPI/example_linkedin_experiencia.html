@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>CV Profesional</title>
+<script type="text/javascript" src="https://platform.linkedin.com/in.js">
+  api_key: 77i0wrm327h22q
+  authorize: true
+  scope: r_fullprofile
+</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="css/custom-theme/jquery-ui.css" /> 
+    <script src="js/jquery-ui.js"></script>
+	<style>
+		.wrapp{width:964px;*width:920px;margin:0 auto;overflow:hidden;background: url('images/flechas.png') no-repeat center 250px #fff;font-family: Arial,Helvetica,sans-serif;font-size:11px;}
+		.cabeceras h2{font-family: Arial,Helvetica,sans-serif;font-size:20px;color: #197BB9;margin:10px 0 0;padding:0;width: 50%;float:left;text-align:center;position:relative;}
+		.ui-widget {font-family: Arial,Helvetica,sans-serif;font-size: 11px; line-height:1.5}
+		.empresa{border:solid 1px black; padding:5px; margin:5px;}
+		.column { width: 380px; float: left; padding:10px;border:1px dashed #ddd;background-color:#fafafa;margin:10px 40px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+		min-height: 500px;height:auto !important;height:500px;
+-moz-box-shadow: 0 0 5px #ccc inset;-webkit-box-shadow: 0 0 5px #ccc inset; box-shadow: 0 0 5px #ccc inset; }
+		.portlet { margin: 0 0 1em;border:1px solid #efefef; cursor: move;box-shadow: 0 2px 5px #ccc;-webkit-box-shadow: 0 2px 5px #ccc;-moz-box-shadow: 0 2px 5px #ccc;}
+		.portlet-header .ui-icon { float: right; }
+		 .portlet-header { background: #197bb9;color:#fff; font-weight:700;margin:0; padding:5px 10px;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;}
+		.portlet-content { padding: 10px; }
+		.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+		.ui-sortable-placeholder * { visibility: hidden; }
+		.saveBtn{position:absolute;background:#197BB9;padding:5px 10px;color:#fff;text-decoration:none;margin:0;font-weight:700;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;font-size: 11px;right:40px;border:2px solid #197BB9;}
+		.saveBtn:hover{color:#197BB9;background:#fff;border:2px solid #197BB9;}
+		#txt_linkedin{font-family: Arial,Helvetica,sans-serif;font-size:16px;color: #197BB9;padding:10px;background:#fafafa;text-align:center;}
+	</style>
+
+	<script type="text/javascript">
+		function loadData() {	
+			meses=new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+		
+		  	IN.API.Profile("me").fields(["positions"]).result(function(resultado) {  
+		  		$('#txt_linkedin').remove();    
+		  		if(resultado.values[0].positions.values){  
+			      	empresas = resultado.values[0].positions.values;
+			      	
+			      	document.experienciaForm.listaLinkedin.value = JSON.stringify(empresas);
+			      	
+				    for(i=0;i<empresas.length; i++){			    	   
+				    	capa = $('#plantilla').html();   
+				    	capa = capa.replace('{id}', empresas[i].id);    
+				    	capa = capa.replace('{empresa}', empresas[i].company.name);    
+				    	capa = capa.replace('{cargo}', empresas[i].title);    			    	
+				    	capa = capa.replace('{comentarios}', ((empresas[i].summary)?empresas[i].summary:''));    	    	
+				    				    	
+				    	fecha = ((empresas[i].startDate.month)?meses[empresas[i].startDate.month-1]+' de ':'') + empresas[i].startDate.year;
+				    	capa = capa.replace('{fh_desde}', fecha );
+				    	    
+				    	fecha = (empresas[i].isCurrent)?' la actualidad':((empresas[i].endDate.month)?meses[empresas[i].endDate.month-1]+' de ':'') + empresas[i].endDate.year;    
+			    	    capa = capa.replace('{fh_hasta}', fecha );
+			    	    
+						$('#listadoLinkedin').append(capa);			          
+			     	}
+			     	
+		     		$( ".column" ).sortable({
+						connectWith: ".column",
+						cancel: ".bloqueado"
+					});
+			
+					$( ".portlet" ).addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+						.find( ".portlet-header" )
+						.addClass( "ui-widget-header ui-corner-all" )							
+						.end()
+						.find( ".portlet-content" );					
+			
+					$( ".column" ).disableSelection();
+				}else{
+		      		$('#plantilla .portlet-header').html('');	      	
+		      		$('#plantilla .portlet-content').html('No tiene historial profesional en Linkedin');	
+		      		capa = $('#plantilla').html();   
+
+					$('#listadoLinkedin').append(capa);		
+		      	}		
+		    });    
+		}
+		
+		function guardarLinkedin(){
+			$('#listadoExperiencia div').each(function(){
+				if($(this).attr('id')){
+					document.experienciaForm.listaIds.value +=	',' + $(this).attr('id');			
+				}
+			});
+			document.experienciaForm.submit();				
+		}
+		
+		
+	</script>
+
+
+</head>
+<body>
+<div id="profile"></div>
+<script type="IN/Login" data-onAuth="loadData"></script> <span id="txt_linkedin">--- Identificate en Linkedin para acceder a tu experiencia profesional</span>
+
+<div id="plantilla" style="display:none;">
+	<div class="portlet" id="{id}">
+		<div class="portlet-header">Empresa: {empresa}</div>
+		<div class="portlet-content">
+			Cargo: <strong>{cargo}</strong><br />
+			Desde {fh_desde} hasta {fh_hasta}<br />
+			{comentarios}
+		</div>
+	</div>
+</div>
+
+<div class="wrapp">
+<div class="cabeceras">
+    <h2>En Linkedin</h2>
+    <h2>En tu perfil <a href="javascript:guardarLinkedin();void(0);" class="saveBtn">Guardar</a></h2>
+</div><!-- cabeceras -->
+
+<div id="listadoLinkedin" class="column">
+
+</div>
+
+
+<cfset meses= 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre'>
+
+<div id="listadoExperiencia" class="column">
+	<cfoutput query="QRY_l_experiencia">
+	<div class="portlet bloqueado">
+		<div class="portlet-header">Empresa: #empresa#</div>
+		<div class="portlet-content">
+			Cargo: <strong>#cargo#</strong><br />
+			Desde <cfif isnumeric(mes_desde) and mes_desde gt 0>#listgetat(meses, mes_desde)# de </cfif>#anno_desde# 
+			hasta <cfif actualmente eq 1>la actualidad<cfelse>
+					<cfif isnumeric(mes_hasta) and mes_hasta gt 0>#listgetat(meses, mes_hasta)# de </cfif>#anno_hasta#
+				  </cfif>
+		</div>
+	</div>
+	</cfoutput>
+</div>
+
+</div><!-- wrapp -->
+
+<div style="display:none;">
+<form name="experienciaForm" method="post">
+	<textarea name="listaLinkedin"></textarea>
+	<input type="text" name="listaIds" value="" />	
+</form>
+</div>
+
+</body>
+</html>

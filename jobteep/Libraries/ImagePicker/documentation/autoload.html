@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/img/favicon.png">
+	<title>ImagePicker Documentation</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+	<script src="http://use.edgefonts.net/source-code-pro.js"></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body id="index">
+	<div id="docs_header">
+		<div class="container">
+			<div id="docs_tagline">
+				<h1>DOCUMENTATION.</h1>
+			</div>
+			<div id="docs_version">1.2</div>
+		</div>
+	</div>
+	<div id="docs_main" class="clearfix">
+		<div class="container">
+			<div id="docs_nav">
+				<ul>
+					<li>Preface<ul><li><a href="index.html">Introduction</a></li><li><a href="releases.html">Release Notes</a></li></ul></li><li>Getting Started<ul><li><a href="installation.html">Installation</a></li><li><a href="how-to.html">How to use it</a></li><li><a href="options.html">Options</a></li><li><a href="configuration.html">Configuration</a></li></ul></li><li>Examples<ul><li><a href="modal-inline.html">Modal and Inline</a></li><li><a href="set-select.html">Set selection</a></li><li><a href="autoload.html">Autoload image</a></li><li><a href="database.html">Save/Load - Database</a></li><li><a href="multiple.html">Multiple images</a></li></ul></li><li>Advanced<ul><li><a href="security.html">Security</a></li><li><a href="debugging.html">Debugging</a></li><li><a href="how-works.html">How it works</a></li></ul></li><li><a href="credits.html">Sources and Credits</a></li>				</ul>
+			</div>
+			<div id="docs_content"><h1>Autoload image from server</h1>
+
+<p>This example will show to autoload an image from server using the <code>loadComplete</code> function.</p>
+<p>Before continuing with this example make sure you have read the <a href="modal-inline.html">Modal &amp; Inline</a> example.</p>
+
+<p>First we start with the PHP:</p>
+<pre><code>&lt;?php
+session_start();
+
+// Let's say that you grab the user id from the session
+$user_id = $_SESSION['user_id'];
+
+// Include ImgPicker.php class
+require dirname(__FILE__) . '/ImgPicker.php';
+
+// ImgPicker options
+$options = array(
+    // Upload directory path
+    'upload_dir' => dirname(__FILE__) . '/../files/',
+    // Upload directory url
+    'upload_url' => 'files/',
+   	// Image versions
+    'versions' => array(
+    	// Generate 200x200 square image for the avatar
+        'avatar' => array(
+            'crop' => true,
+            'max_width' => 200,
+            'max_height' => 200
+        )
+    ),
+    // !!! Here you have to return the user image
+    'load' => function($instance) {
+        global $user_id;
+        // Make a query from database and return the filename:
+        return '123.png';
+    },
+    
+    // Upload start callback
+    'upload_start' => function($image, $instance) {
+        global $user_id;
+        // Name the temp image as $user_id
+        $image->name = '~'.$user_id.'.'.$image->type;	
+    },
+    // Crop start callback
+    'crop_start' => function($image, $instance) {
+       global $user_id;
+       // Change the name of the image
+       $image->name = $user_id.'.'.$image->type;
+    },
+    // Crop complete callback
+    'crop_complete' => function($image, $instance) {
+        // Save the image to database
+    }
+);
+
+// Create ImgPicker instance
+new ImgPicker($options);
+?&gt;</code></pre>
+
+
+<p>And the JavaScript code:</p>
+
+<pre><code>&lt;script&gt;
+$(function() {
+    $('#myModal').imgPicker({
+        url: 'server/upload_avatar.php',
+        aspectRatio: 1,
+        // We use the loadComplete to set the image
+        loadComplete: function(image) {
+            // Set #avatar image src
+            $('#avatar').attr('src', image.versions.avatar.url);
+        },
+        cropSuccess: function(image) {
+            $('#avatar').attr('src', image.versions.avatar.url);
+            this.modal('hide');
+        }
+    });
+});
+&lt;/script&gt;
+</code></pre>			</div>
+		</div>
+	</div>
+	<div id="docs_footer">
+		<div class="container">
+			<ul>
+				<li><a href="http://codecanyon.net/user/HazzardWeb/portfolio" target="_blank" title="CodeCanyon Portfolio">CodeCanyon</a></li>
+				<li><a href="mailto:hazzardweb@gmail.com" target="_blank" title="Send email">Email</a></li>
+				<li><a href="https://www.facebook.com/hazzardweb.net" target="_blank">Facebook</a></li>
+				<li><a href="https://twitter.com/HazzardWeb" target="_blank">Twitter</a></li>
+			</ul>
+			<a href="http://hazzardweb.net" target="_blank">
+				<img src="assets/img/logo-footer.png" width="130" alt="HazzardWeb" title="Visit hazzardweb.net">
+			</a>
+		</div>
+	</div>
+	<div id="docs_top">
+        <a href="#index" title="Back to the top">
+            <i class="icon-chevron-up"></i>
+        </a>
+    </div>
+</body>
+</html>

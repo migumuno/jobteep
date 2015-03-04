@@ -1,0 +1,38 @@
+#Activar RewriteEngine
+RewriteEngine on
+#Define el directorio base
+#RewriteBase /
+
+#Evitar visualización de directorios y archivos
+Options -Indexes
+
+#Páginas de error
+ErrorDocument 400 /SO/Exceptions/notFound.html
+ErrorDocument 401 /SO/Exceptions/notFound.html
+ErrorDocument 403 /SO/Exceptions/notFound.html
+ErrorDocument 404 /SO/Exceptions/notFound.html
+ErrorDocument 500 /SO/Exceptions/serverError.html
+
+#Cambiar página por defecto
+DirectoryIndex main.php index.html
+
+# Entrada: /domain
+# Salida: main.php?domain=domain
+RewriteRule ^(\w+)$ main.php?domain=$1
+
+# Entrada: domain/PDF
+# Salida: main.php?domain=domain&menu=PDF
+RewriteRule ^(\w+)/PDF$ main.php?domain=$1&menu=PDF
+
+# Entrada: domain/filtro
+# Salida: main.php?domain=domain1&filtro=filtro
+RewriteRule ^(\w+)/(\w+)$ main.php?domain=$1&filtro=$2
+
+RewriteCond %{HTTP_HOST} ^jobteep.com$ [NC]
+RewriteRule ^(.*)$ http://www.jobteep.com/ [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www.jobteep.es$ [NC]
+RewriteRule ^(.*)$ http://www.jobteep.com/ [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^jobteep.es$ [NC]
+RewriteRule ^(.*)$ http://www.jobteep.com/ [L,R=301]

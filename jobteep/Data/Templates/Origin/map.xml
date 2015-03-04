@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+	<page>
+		<name>default</name>
+		<title>The Jobfeel | Login</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>entrar the jobfeel, the jobfeel, jobteep, acceso jobteep, curriculum</keywords>
+		<layout>layouts/ini.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/story.php</content>
+	</page>
+	<page>
+		<name>error</name>
+		<title>The Jobfeel | Página no encontrada</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>entrar the jobfeel, the jobfeel, jobteep, acceso jobteep, curriculum</keywords>
+		<layout>layouts/profile.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/error.php</content>
+	</page>
+	<page>
+		<name>PDF</name>
+		<title>The Jobfeel | PDF</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>entrar the jobfeel, the jobfeel, jobteep, acceso jobteep, curriculum</keywords>
+		<layout>layouts/pdf.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/pdf.php</content>
+	</page>
+</pages>

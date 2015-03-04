@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 'Lobster', cursive;
+	color: #4c4c4c;
+}
+
+h2 {
+	font-size: 20px;
+	font-family: 'Lobster', cursive;
+	color: #4c4c4c;
+}
+
+.panel {
+	background-color: #fff;
+}
+
+.card {
+	padding: 10px;
+	font-family: 'Lobster', cursive;
+	color: #4c4c4c;
+}
+
+.titulo {
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+}
+
+[posicion="center"] {
+	text-align: center;
+}
+
+.xxl {
+	font-size: 38px;
+}

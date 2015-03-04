@@ -1,0 +1,35 @@
+- 1.2.1 (19.08.2014)
+	- Added a check for PHP Exif extension (server/ImgPicker.php)
+
+- 1.2 (22.05.2014)
+	Demo: http://demo.hazzardweb.net/imgPicker/
+	Docs: http://demo.hazzardweb.net/imgPicker/docs
+	Video: http://youtu.be/1RJG9MhPlFQ
+	
+	ImagePicker 1.2 is not compatible with the old 1.* versions because significant changes have been made both on the JavaScript and PHP.
+	Now it's easier to work with the script because of the new structure and helper functions.
+	Here are some of the new features:
+	- Multiple image versions
+	- Upload progress bar
+	- Rotate image
+	- Re-Crop previously uploaded image
+	- Autoload image
+	- Drag & Drop support
+	- Better modal and inline integration
+	- Responsive design
+	- Better code
+	- In depth documentation
+
+	
+- 1.1.2 (25.04.2014)
+	- fixed a bug for IE8
+
+- 1.1.1 (24.04.2014)
+	- fixed a bug from the 1.1 update (imgPicker.php)
+	
+- 1.1 (23.04.2014)
+	- added support for transparent png images
+	- added option to disable HTML5 upload; see the documentation/ (http://i.imgur.com/IAJx8nu.png)
+	- fixed bug where original image was still saved even with original = false
+
+- 1.0 - Initial release

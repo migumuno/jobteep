@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+	<page>
+		<name>default</name>
+		<title>JobTeep</title>
+		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
+		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<layout>layouts/admin.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/welcome.php</content>
+	</page>
+	<page>
+		<name>error</name>
+		<title>JobTeep</title>
+		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
+		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<layout>layouts/error.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/error.php</content>
+	</page>
+</pages>

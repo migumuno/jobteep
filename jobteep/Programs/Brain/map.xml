@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+	<page>
+		<name>default</name>
+		<title>The Jobfeel | Brain</title>
+		<layout>layouts/default.php</layout>
+		<content>pages/welcome.php</content>
+	</page>
+</pages>

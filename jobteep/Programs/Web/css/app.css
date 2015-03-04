@@ -1,0 +1,261 @@
+@font-face {
+font-family: Helvetica;
+src: url(../fonts/helvetica.otf);
+}
+
+@font-face {
+font-family: Helvetica_Titulos;
+src: url(../fonts/HelveticaNeueLTPro-Titulos.otf);
+}
+
+@font-face {
+font-family: Helvetica_Titulos2;
+src: url(../fonts/HelveticaNeueLTPro-h2.otf);
+}
+
+@font-face {
+font-family: Helvetica_UltraLight;
+src: url(../fonts/HelveticaNeueLTPro-UL.otf);
+}
+
+@font-face {
+font-family: Helvetica_Light;
+src: url(../fonts/HelveticaNeueLTPro-L.otf);
+}
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-color: #3a3a3a;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.formulario {
+	width: 300px;
+	background-color: rgba(0,0,0,0.5);
+	height: auto;
+	z-index: 10;
+	position: relative;
+	right: 0;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	padding: 11px 25px 11px;
+	cursor: pointer;
+	border: 2px solid #4cddf3;
+	border-radius: 2px;
+	letter-spacing: 2px;
+	pointer-events: auto;
+	float: left;
+
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.formulario_reduced {
+	width: 75px;
+	text-align: left;
+	padding: 10px;
+	margin-right: 225px;
+}
+
+.formulario h1 {
+	color: #fff;
+	font-size: 30px;
+	margin: 0;
+	font-weight: normal;
+	font-family: "Open Sans",sans-serif;
+	text-transform: none;
+}
+
+#frases {
+	width: 600px;
+	height: auto;
+	z-index: 10;
+	position: relative;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	padding: 11px 25px 11px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	pointer-events: auto;
+	float: left;
+}
+
+.main-title ul {
+	font-size: 40px;
+}
+
+#content_reproducir {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 20;
+}
+
+.form-horizontal .control-group {
+	margin-bottom: 0;
+}
+
+.main-title {
+	height: 600px;
+	margin-top: -250px;
+}
+
+#close {
+	padding: 10px;
+	width: 30px;
+	height: auto;
+}
+
+.rotate45 {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+.teep {
+	background-color: #4cddf3;
+	background-image: url("../img/parallax/parallax-02.png");
+}
+
+.parallax.teep {
+	height: 780px;
+}
+
+.half {
+	width: 450px;
+}
+
+.nopadding {
+	padding: 0;
+}
+
+.pwhite {
+	color: #fff;
+	font-family: "Open Sans",sans-serif;
+    font-size: 17px;
+    margin: 20px auto;
+    padding: 20px;
+	text-align: center;
+}
+
+.foot-once{
+	width: 100%;
+	padding: 0 0 0 28px;
+	line-height: 25px;
+}
+
+.socialFooter {
+	margin-top: 0;
+}
+
+.doble {
+	padding: 50px;
+	padding-bottom: 0;
+	color: #888888;
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.subtitulo {
+	color: #fff;
+    font-family: "Open Sans",sans-serif;
+    font-size: 37px;
+    font-weight: 300;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subtitulo_black {
+	color: #404141;
+    font-family: "Open Sans",sans-serif;
+    font-size: 37px;
+    font-weight: 300;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.p-image-01 {
+	position: relative;
+}
+
+.email {
+	width: 100%;
+	text-align: center;
+	padding: 50px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+	
+}
+
+.email a {
+	color: #4cddf3;
+}
+
+.email a:hover {
+	color: #888888;
+}
+
+.centrado {
+	margin: auto;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+}
+
+#video-volume {
+	bottom: 80px;
+}
+
+#bajar {
+	bottom: 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 24px;
+	margin-left: -25px;
+	left: 50%;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+	background: url("../img/abajo.png") no-repeat;
+	background-size: 100%;
+	opacity: 0.5;
+}
+
+.logo {
+	font-family: "Open Sans",sans-serif;
+	text-transform: none;
+}
+
+.socialFooter {
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.label {
+  width: 100%;
+  padding-top: 10px;
+}

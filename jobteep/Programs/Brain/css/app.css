@@ -1,0 +1,185 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image: url("../img/brain.jpg");
+	background-attachment: fixed;
+	background-size: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	color: #ffffff;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+}
+
+h1 a {
+	color: #ffffff;
+}
+
+h1 a:hover {
+	color: #ffffff;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+}
+
+select {
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+
+label {
+	font-weight: bold;
+}
+
+input {
+	font-weight: normal;
+}
+
+text {
+	color: #ffffff;
+}
+
+/* Panels */
+.panel {
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: none;
+  border: none;
+  opacity: 0.9;
+  background-color: #000000;
+  margin-bottom: 0;
+  color: #ffffff; }
+  .panel > :first-child {
+    margin-top: 0; }
+  .panel > :last-child {
+    margin-bottom: 0; }
+  .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
+    color: #ffffff; }
+  .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
+    line-height: 1;
+    margin-bottom: 1.5rem; }
+    .panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
+      line-height: 1.4; }
+  .panel.callout {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c5e8f3;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    background: #f2fafc; }
+    .panel.callout > :first-child {
+      margin-top: 0; }
+    .panel.callout > :last-child {
+      margin-bottom: 0; }
+    .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p, .panel.callout li, .panel.callout dl {
+      color: #333333; }
+    .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
+      line-height: 1;
+      margin-bottom: 0.625rem; }
+      .panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
+        line-height: 1.4; }
+    .panel.callout a:not(.button) {
+      color: #2ba6cb; }
+  .panel.radius {
+    border-radius: 3px; }
+
+.panel input {
+	background-color: transparent;
+	color: #ffffff;
+	border: none;
+}
+
+.panel input:focus {
+	background-color: transparent;
+	color: #ffffff;
+	border: none;
+	box-shadow: none;
+}
+
+span.prefix, label.prefix {
+  background: transparent;
+  border: none;
+  color: #fff; }
+
+/*Mis capas*/
+.bienvenida {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	height: 140px;
+	margin-left: -300px;
+	margin-top: -70px;
+}
+
+.content {
+	width: 100%;
+	color: #ffffff;
+}
+
+.texto {
+	width: 100%;
+	padding: 2%;
+	background-color: #fff;
+	color: #000;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.texto p {
+	color: #000 !important;
+}
+
+#graphic {
+	color: #fff;
+}
+
+#graphic text {
+	color: #ffffff;
+}
+
+/*TREE GRAPHIC*/
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}

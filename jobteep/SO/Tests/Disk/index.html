@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pruebas Multimedia</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/cupertino/jquery-ui.css " />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://www.jobteep.com/Libraries/jQuery-File-Upload-master/css/style.css">
+</head>
+<body>
+	
+	
+
+	<div id = "subir">
+		<input id="archivos" type="file" name="archivos[]" multiple="multiple" onchange="seleccionado();" />
+	</div>
+	<div id = "cargados"></div>
+	
+	
+	<script>
+		function seleccionado(){ 
+	
+			var archivos = document.getElementById("archivos");//Damos el valor del input tipo file
+			var archivo = archivos.files; //Obtenemos el valor del input (los arcchivos) en modo de arreglo
+		
+			/* Creamos el objeto que hara la petición AJAX al servidor, debemos de validar 
+			si existe el objeto “ XMLHttpRequest” ya que en internet explorer viejito no esta,
+			y si no esta usamos “ActiveXObject” */ 
+		
+			if(window.XMLHttpRequest) { 
+			 	var Req = new XMLHttpRequest(); 
+			} else if(window.ActiveXObject) { 
+			 	var Req = new ActiveXObject("Microsoft.XMLHTTP"); 
+			}
+		
+			//El objeto FormData nos permite crear un formulario pasandole clave/valor para poder enviarlo, 
+			//este tipo de objeto ya tiene la propiedad multipart/form-data para poder subir archivos
+			var data = new FormData();
+		
+			//Como no sabemos cuantos archivos subira el usuario, iteramos la variable y al
+			//objeto de FormData con el metodo "append" le pasamos calve/valor, usamos el indice "i" para
+			//que no se repita, si no lo usamos solo tendra el valor de la ultima iteración
+			for(i=0; i<archivo.length; i++){
+			  	data.append('archivo'+i,archivo[i]);
+			}
+		
+			//Pasándole la url a la que haremos la petición
+			Req.open("POST", "ajax.php", true);
+		
+			/* Le damos un evento al request, esto quiere decir que cuando termine de hacer la petición,
+			se ejecutara este fragmento de código */ 
+		
+			Req.onload = function(Event) {
+				//Validamos que el status http sea ok 
+				if (Req.status == 200) { 
+					//Recibimos la respuesta de php
+					var msg = Req.responseText;
+					$("#cargados").append(msg);
+				} else { 
+				  	console.log(Req.status); //Vemos que paso. 
+				} 
+			};
+		
+			 //Enviamos la petición 
+			 Req.send(data); 
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/img/favicon.png">
+	<title>ImagePicker Documentation</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+	<script src="http://use.edgefonts.net/source-code-pro.js"></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body id="index">
+	<div id="docs_header">
+		<div class="container">
+			<div id="docs_tagline">
+				<h1>DOCUMENTATION.</h1>
+			</div>
+			<div id="docs_version">1.2</div>
+		</div>
+	</div>
+	<div id="docs_main" class="clearfix">
+		<div class="container">
+			<div id="docs_nav">
+				<ul>
+					<li>Preface<ul><li><a href="index.html">Introduction</a></li><li><a href="releases.html">Release Notes</a></li></ul></li><li>Getting Started<ul><li><a href="installation.html">Installation</a></li><li><a href="how-to.html">How to use it</a></li><li><a href="options.html">Options</a></li><li><a href="configuration.html">Configuration</a></li></ul></li><li>Examples<ul><li><a href="modal-inline.html">Modal and Inline</a></li><li><a href="set-select.html">Set selection</a></li><li><a href="autoload.html">Autoload image</a></li><li><a href="database.html">Save/Load - Database</a></li><li><a href="multiple.html">Multiple images</a></li></ul></li><li>Advanced<ul><li><a href="security.html">Security</a></li><li><a href="debugging.html">Debugging</a></li><li><a href="how-works.html">How it works</a></li></ul></li><li><a href="credits.html">Sources and Credits</a></li>				</ul>
+			</div>
+			<div id="docs_content"><h1>PHP Configuration</h1>
+<ul>
+	<li><a href="#options">Options</a></li>
+	<li><a href="#callback-options">Callback Options</a></li>
+</ul>
+
+<p>When you create a new instance of <code>ImgPicker</code> you can pass some options:</p>
+
+<pre><code>&lt;?php
+$options = array(
+   'upload_dir' => dirname(__FILE__) . '/../files/',
+   'max_file_size' => 3000000 
+)
+new ImgPicker($options);
+?&gt;
+</code></pre>
+
+<h2><a href="#options" name="options">Options</a></h2>
+
+<p>Here are all of the options:</p>
+
+<h3><a href="#upload_dir" name="upload_dir"></a>upload_dir</h3>
+<p>Upload directory path<br>
+	<ul class="disc">
+		<li>Type: <em>string</em></li>
+		<li>Default: <code>server/files/</code></li>
+	</ul>
+</p>
+
+<h3><a href="#upload_url" name="upload_url"></a>upload_url</h3>
+<p>Upload directory url<br>
+	<ul class="disc">
+		<li>Type: <em>string</em></li>
+		<li>Default: full url to <code>server/files/</code></li>
+	</ul>
+</p>
+
+<h3><a href="#accept_file_types" name="accept_file_types"></a>accept_file_types</h3>
+<p>Accepted file types.<br>
+	<ul class="disc">
+		<li>Type: <em>string</em></li>
+		<li>Default: <code>png|jpg|jpeg|gif</code></li>
+	</ul>
+</p>
+
+<h3><a href="#mkdir_mode" name="mkdir_mode"></a>mkdir_mode</h3>
+<p>Directory <a href="http://www.php.net/manual/en/function.mkdir.php">mode</a>.<br>
+	<ul class="disc">
+		<li>Type: <em>integer</em></li>
+		<li>Default: <code>0777</code></li>
+	</ul>
+</p>
+
+<h3><a href="#max_file_size" name="max_file_size"></a>max_file_size</h3>
+<p>File max size restriction in bytes (e.g. 5000000 = 5MB).<br>
+	<ul class="disc">
+		<li>Type: <em>integer</em></li>
+		<li>Default: <code>null</code></li>
+	</ul>
+</p>
+
+<h3><a href="#min_file_size" name="min_file_size"></a>min_file_size</h3>
+<p>File min size restriction in bytes (e.g. 1 = 1B).<br>
+	<ul class="disc">
+		<li>Type: <em>integer</em></li>
+		<li>Default: <code>1</code></li>
+	</ul>
+</p>
+
+<h3><a href="#max_width" name="max_width"></a>max_width</h3>
+<p>Image max width restriction (e.g. 100 = 100 pixels).<br>
+	<ul class="disc">
+		<li>Type: <em>integer</em></li>
+		<li>Default: <code>null</code></li>
+	</ul>
+</p>
+
+<h3><a href="#max_height" name="max_height"></a>max_height</h3>
+<p>Image max height restriction (e.g. 100 = 100 pixels).<br>
+	<ul class="disc">
+		<li>Type: <em>integer</em></li>
+		<li>Default: <code>null</code></li>
+	</ul>
+</p>
+
+<h3><a href="#min_width" name="min_width"></a>min_width</h3>
+<p>Image min width restriction (e.g. 100 = 100 pixels).<br>
+	<ul class="disc">
+		<li>Type: <em>integer</em></li>
+		<li>Default: <code>1</code></li>
+	</ul>
+</p>
+
+<h3><a href="#min_height" name="min_height"></a>min_height</h3>
+<p>Image min height restriction (e.g. 100 = 100 pixels).<br>
+	<ul class="disc">
+		<li>Type: <em>integer</em></li>
+		<li>Default: <code>1</code></li>
+	</ul>
+</p>
+
+<h3><a href="#versions" name="versions"></a>versions</h3>
+<p>Image versions. Array with image versions to be created. Each element is another array which has can have other options.<br>
+	<ul class="disc">
+		<li>Type: <em>array</em></li>
+		<li>Default: <code>n/a</code></li>
+	</ul>
+</p>
+<pre><code>'versions' => array(
+    // This will create 2 image versions: the original one and a 200x200 one
+    'avatar' => array(
+    	// Other upload directory path (Default: main upload_dir)
+        'upload_dir' => dirname(__FILE__) . '/../files/avatar/',
+        // Other upload directory url (Default: main upload_url)
+        'upload_url' => 'http://localhost/imgPicker/files/avatar/',
+        // Create square image (Default: false)
+        'crop' => true,
+        // Max width (Default: n/a)
+        'max_width' => 200, 
+        // Max height (Default: n/a)
+        'max_height' => 200
+    ),
+)</code></pre>
+<p>If you want to have only one image create a version with an empty name:</p>
+
+<pre><code>'versions' => array(
+    // This will create only one image
+    '' => array(
+    	// The same options as above can be used here
+    ),
+)</code></pre>
+
+<h2><a href="#callback-options" name="callback-options">Callback Options</a></h2>
+
+<p>The callbacks are functions that will be called once an action is completed. In all of these callbacks you can retrive data sent from the Client Side using <code>$_POST['data']</code> or <code>$_GET['data']</code> for the <em>load</em> callback. To send data from the Client Side check out <a href="options.html#data">Options > data</a></p>
+<h3><a href="#load" name="load"></a>load</h3>
+<p>Called when autoloading image.</p>
+<pre><code> /**
+ *  @param 	ImgPicker       $instance
+ *  @return string|array
+ */
+'load' => function($instance) {
+	// You can make a query from your database and return the image:
+	// return '123.jpg'; |  return array('1.jpg', '2.jpg');
+},
+</code></pre>
+
+<h3><a href="#delete" name="delete"></a>delete</h3>
+<p>Called when trying to delete image.</p>
+<pre><code> /**
+ *  @param  stdClass        $filename
+ *  @param  ImgPicker       $instance
+ *  @return boolean
+ */
+'delete' => function($filename, $instance) {
+    // Wether to allow file deletion
+    return true;
+},
+</code></pre>
+
+<h3><a href="#upload_start" name="upload_start"></a>upload_start</h3>
+<p>Called before the upload starts.</p>
+<pre><code> /**
+ *  @param  stdClass        $image
+ *  @param  ImgPicker       $instance
+ *  @return void
+ */
+'upload_start' => function($image, $instance) {
+},
+</code></pre>
+
+
+<h3><a href="#upload_complete" name="upload_complete"></a>upload_complete</h3>
+<p>Called after upload.</p>
+<pre><code> /**
+ *  @param  stdClass        $image
+ *  @param  ImgPicker       $instance
+ *  @return void
+ */
+'upload_complete' => function($image, $instance) {
+},
+</code></pre>
+
+
+<h3><a href="#crop_start" name="crop_start"></a>crop_start</h3>
+<p>Called before the crop starts.</p>
+<pre><code> /**
+ *  @param  stdClass        $image
+ *  @param  ImgPicker       $instance
+ *  @return void
+ */
+'crop_start' => function($image, $instance) {
+},
+</code></pre>
+
+<h3><a href="#crop_complete" name="crop_complete"></a>crop_complete</h3>
+<p>Called after cropping.</p>
+<pre><code> /**
+ *  @param  stdClass        $image
+ *  @param  ImgPicker       $instance
+ *  @return void
+ */
+'crop_complete' => function($image, $instance) {
+},
+</code></pre>
+
+<p>In all callbacks the <code>$image</code> parameter is an stdClass object and has the following proprieties:</p>
+
+<ul class="disc">
+	<li><code>name</code> <em>string</em></li>
+	<li><code>type</code> <em>string</em></li>
+	<li><code>size</code> <em>integer</em> (available only in <em>upload_start</em>)</li>
+	<li><code>path</code> <em>string</em></li>
+	<li><code>url</code> <em>string</em></li>
+	<li><code>width</code> <em>integer</em></li>
+	<li><code>height</code> <em>integer</em></li>
+	<li><code>versions</code> <em>array</em> (available only in <em>upload_complete</em> and <em>crop_complete</em>)</li>
+</ul>
+<p>You can access them like this: <code>$image->name</code>, <code>$image->path</code>.</p>			</div>
+		</div>
+	</div>
+	<div id="docs_footer">
+		<div class="container">
+			<ul>
+				<li><a href="http://codecanyon.net/user/HazzardWeb/portfolio" target="_blank" title="CodeCanyon Portfolio">CodeCanyon</a></li>
+				<li><a href="mailto:hazzardweb@gmail.com" target="_blank" title="Send email">Email</a></li>
+				<li><a href="https://www.facebook.com/hazzardweb.net" target="_blank">Facebook</a></li>
+				<li><a href="https://twitter.com/HazzardWeb" target="_blank">Twitter</a></li>
+			</ul>
+			<a href="http://hazzardweb.net" target="_blank">
+				<img src="assets/img/logo-footer.png" width="130" alt="HazzardWeb" title="Visit hazzardweb.net">
+			</a>
+		</div>
+	</div>
+	<div id="docs_top">
+        <a href="#index" title="Back to the top">
+            <i class="icon-chevron-up"></i>
+        </a>
+    </div>
+</body>
+</html>

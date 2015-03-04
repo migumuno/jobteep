@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/img/favicon.png">
+	<title>ImagePicker Documentation</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+	<script src="http://use.edgefonts.net/source-code-pro.js"></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body id="index">
+	<div id="docs_header">
+		<div class="container">
+			<div id="docs_tagline">
+				<h1>DOCUMENTATION.</h1>
+			</div>
+			<div id="docs_version">1.2</div>
+		</div>
+	</div>
+	<div id="docs_main" class="clearfix">
+		<div class="container">
+			<div id="docs_nav">
+				<ul>
+					<li>Preface<ul><li><a href="index.html">Introduction</a></li><li><a href="releases.html">Release Notes</a></li></ul></li><li>Getting Started<ul><li><a href="installation.html">Installation</a></li><li><a href="how-to.html">How to use it</a></li><li><a href="options.html">Options</a></li><li><a href="configuration.html">Configuration</a></li></ul></li><li>Examples<ul><li><a href="modal-inline.html">Modal and Inline</a></li><li><a href="set-select.html">Set selection</a></li><li><a href="autoload.html">Autoload image</a></li><li><a href="database.html">Save/Load - Database</a></li><li><a href="multiple.html">Multiple images</a></li></ul></li><li>Advanced<ul><li><a href="security.html">Security</a></li><li><a href="debugging.html">Debugging</a></li><li><a href="how-works.html">How it works</a></li></ul></li><li><a href="credits.html">Sources and Credits</a></li>				</ul>
+			</div>
+			<div id="docs_content"><h1>Debugging</h1>
+<p>If you have trouble running the script here are few tips before <a href="http://codecanyon.net/user/HazzardWeb">contacting</a> me:</p>
+
+<p>If you get an error with this message: <code>Invalid response</code> that means the server is not sending a valid JSON fromat. This may be caused from a PHP error. Here is want you can do to see what's causing that (using Google Chrome):</p>
+
+<p class="video-wrapper"><iframe src="http://www.screenr.com/embed/xqWN" width="800" height="487" frameborder="0"></iframe></p>
+<p>&nbsp;</p>
+<p>If you get errors in the Console tab about the Origin request make sure in <code>server/upload_*.php</code> you accept the request from where you send it by adding:</p>
+
+<pre><code>header('Access-Control-Allow-Origin: yourwebsite.com');
+header('Access-Control-Allow-Origin: www.yourwebsite.com');</code></pre>
+
+<p>&nbsp;</p>
+<p>If you get server errors about the file size, make sure you change the settings for upload_max_filesize and post_max_size in <a href="http://www.php.net/manual/en/ini.core.php#ini.sect.file-uploads">php.ini</a></p>			</div>
+		</div>
+	</div>
+	<div id="docs_footer">
+		<div class="container">
+			<ul>
+				<li><a href="http://codecanyon.net/user/HazzardWeb/portfolio" target="_blank" title="CodeCanyon Portfolio">CodeCanyon</a></li>
+				<li><a href="mailto:hazzardweb@gmail.com" target="_blank" title="Send email">Email</a></li>
+				<li><a href="https://www.facebook.com/hazzardweb.net" target="_blank">Facebook</a></li>
+				<li><a href="https://twitter.com/HazzardWeb" target="_blank">Twitter</a></li>
+			</ul>
+			<a href="http://hazzardweb.net" target="_blank">
+				<img src="assets/img/logo-footer.png" width="130" alt="HazzardWeb" title="Visit hazzardweb.net">
+			</a>
+		</div>
+	</div>
+	<div id="docs_top">
+        <a href="#index" title="Back to the top">
+            <i class="icon-chevron-up"></i>
+        </a>
+    </div>
+</body>
+</html>

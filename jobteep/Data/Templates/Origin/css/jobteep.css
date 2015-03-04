@@ -1,0 +1,99 @@
+.title_actual {
+	 background-color: #c9d46f;
+}
+
+.title_education {
+	 background-color: #4c4c4c;
+}
+
+.title_work {
+	 background-color: #8b905e;
+}
+
+.title_proyect {
+	 background-color: #4cddf3;
+}
+
+.title_act {
+	background-color: #c9d46f;
+}
+
+.title_act h2 {
+	color: #ffffff;
+}
+
+.label {
+	background-color: #c9d46f;
+}
+
+.level {
+	background-color: #c9d46f;
+}
+
+.definicion strong {
+	color: #4cddf3;
+}
+
+.highlight {
+	color: #c9d46f;
+}
+
+.highlight hr {
+	border-color: solid #c9d46f;
+}
+
+.higlight_background {
+	background-color: #c9d46f;
+}
+
+.higlight_background_alpha {
+	background-color: rgba(201,212,111,0.5);
+}
+
+.education {
+	color: #4c4c4c;
+}
+
+.education hr {
+	border-color: solid #4c4c4c;
+}
+
+.education_background {
+	background-color: #4c4c4c;
+}
+
+.education_background_alpha {
+	background-color: rgba(76,76,76,0.5);
+}
+
+.work {
+	color: #8b905e;
+}
+
+.work hr {
+	border-color: solid #8b905e;
+}
+
+.work_background {
+	background-color: #8b905e;
+}
+
+.work_background_alpha {
+	background-color: rgba(139,144,94,0.5);
+}
+
+.proyect {
+	color: #4cddf3;
+}
+
+.proyect hr {
+	border-color: solid #4cddf3;
+}
+
+.proyect_background {
+	background-color: #4cddf3;
+}
+
+.proyect_background_alpha {
+	background-color: rgba(76,221,243,0.5);
+}

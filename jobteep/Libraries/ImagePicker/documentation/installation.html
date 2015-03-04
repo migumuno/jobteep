@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/img/favicon.png">
+	<title>ImagePicker Documentation</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+	<script src="http://use.edgefonts.net/source-code-pro.js"></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body id="index">
+	<div id="docs_header">
+		<div class="container">
+			<div id="docs_tagline">
+				<h1>DOCUMENTATION.</h1>
+			</div>
+			<div id="docs_version">1.2</div>
+		</div>
+	</div>
+	<div id="docs_main" class="clearfix">
+		<div class="container">
+			<div id="docs_nav">
+				<ul>
+					<li>Preface<ul><li><a href="index.html">Introduction</a></li><li><a href="releases.html">Release Notes</a></li></ul></li><li>Getting Started<ul><li><a href="installation.html">Installation</a></li><li><a href="how-to.html">How to use it</a></li><li><a href="options.html">Options</a></li><li><a href="configuration.html">Configuration</a></li></ul></li><li>Examples<ul><li><a href="modal-inline.html">Modal and Inline</a></li><li><a href="set-select.html">Set selection</a></li><li><a href="autoload.html">Autoload image</a></li><li><a href="database.html">Save/Load - Database</a></li><li><a href="multiple.html">Multiple images</a></li></ul></li><li>Advanced<ul><li><a href="security.html">Security</a></li><li><a href="debugging.html">Debugging</a></li><li><a href="how-works.html">How it works</a></li></ul></li><li><a href="credits.html">Sources and Credits</a></li>				</ul>
+			</div>
+			<div id="docs_content"><h1>Installation</h1>
+<ul>
+	<li><a href="#install-imagepicker">Install ImagePicker</a></li>
+	<li><a href="#quick-configuration">Quick Configuration</a></li>
+	<li><a href="#requirements">Requirements</a></li>
+	<li><a href="#browser-compatibility">Browser Compatibility</a></li>
+</ul>
+
+<h2><a href="#install-imagepicker" name="install-imagepicker">Install ImagePicker</a></h2>
+<p>Extract from the downloaded archive the entire <code>imgPicker</code> folder or the contents of it you your server. <br> Make sure that the <code>files</code> directory has <code>777</code> permission. <br> Now you can run the script in your browser. See the included examples.</p>
+
+<h2><a href="#quick-configuration" name="quick-configuration">Quick Configuration</a></h2>
+<p>ImagePicker has two sets of options: the jQuery plugin options (see <a href="options.html">Options</a> section) and the PHP class options (see <a href="configuration.html">Configuration</a> section). The included examples have some options set, but you can change them however you want.
+</p>
+
+<p>This is how the jQuery plugin options look like:</p>
+<pre><code>$('#avatarModal').imgPicker({
+    url: 'server/upload_avatar.php',
+    aspectRatio: 1,
+    cropSuccess: function(image) {
+        $('#avatar').attr('src', image.versions.avatar.url);
+        this.modal('hide');
+    }
+});</code></pre>
+
+<p>This is how the PHP class options look like:</p>
+<pre><code>$options = array(
+    'upload_dir' => dirname(__FILE__) . '/../files/',
+    'upload_url' => 'http://localhost/imgPicker/files/',
+    'accept_file_types' => 'png|jpg|jpeg|gif',
+    'versions' => array(
+    	'avatar' => array(
+    	    'crop' => true,
+            'max_width' => 200,
+            'max_height' => 200
+    	)
+    )
+);
+
+new ImgPicker($options);</code></pre>
+
+<h2><a href="#requirements" name="requirements">Requirements</a></h2>
+<p>ImagePicker requires PHP >= 5.3.</p>
+
+<h2><a href="#browser-compatibility" name="browser-compatibility">Browser Compatibility</a></h2>
+<p>ImagePicker works on all major browsers (including mobile) with some exceptions*:</p>
+<ul>
+	<li>Chrome</li>
+	<li>Firefox</li>
+	<li>Opera</li>
+	<li>Safari 5*</li>
+	<li>Safari 7</li>
+	<li>IE8* and IE9*</li>
+	<li>IE10 and IE11</li>
+</ul>
+<p>*Only upload works due to no <a href="https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest">XHR</a> support.</p>			</div>
+		</div>
+	</div>
+	<div id="docs_footer">
+		<div class="container">
+			<ul>
+				<li><a href="http://codecanyon.net/user/HazzardWeb/portfolio" target="_blank" title="CodeCanyon Portfolio">CodeCanyon</a></li>
+				<li><a href="mailto:hazzardweb@gmail.com" target="_blank" title="Send email">Email</a></li>
+				<li><a href="https://www.facebook.com/hazzardweb.net" target="_blank">Facebook</a></li>
+				<li><a href="https://twitter.com/HazzardWeb" target="_blank">Twitter</a></li>
+			</ul>
+			<a href="http://hazzardweb.net" target="_blank">
+				<img src="assets/img/logo-footer.png" width="130" alt="HazzardWeb" title="Visit hazzardweb.net">
+			</a>
+		</div>
+	</div>
+	<div id="docs_top">
+        <a href="#index" title="Back to the top">
+            <i class="icon-chevron-up"></i>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+	<restaurant>
+		<name>Bodega Bar El Pimpi</name>
+		<latitude>36.721808</latitude>
+		<longitude>-4.418033</longitude>
+		<dir>Calle Granada, 62</dir>
+		<city>Málaga</city>
+	</restaurant>
+	<restaurant>
+		<name>La Rebaná</name>
+		<latitude>36.721158</latitude>
+		<longitude>-4.420204</longitude>
+		<dir>Calle Molina Lario, 4</dir>
+		<city>Málaga</city>
+	</restaurant>
+</restaurants>

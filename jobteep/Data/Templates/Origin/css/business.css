@@ -1,0 +1,102 @@
+.title_actual {
+	 background-color: #e73943;
+}
+
+.title_education {
+	 background-color: #392c19;
+}
+
+.title_work {
+	 background-color: #c5bdb2;
+}
+
+.title_proyect {
+	 background-color: #c4d19b;
+}
+
+.title_act {
+	background-color: #e73943;
+}
+
+.title_act h2 {
+	color: #ffffff;
+}
+
+.label {
+	background-color: #e73943;
+}
+
+.level {
+	background-color: #e73943;
+}
+
+.definicion strong {
+	color: #c4d19b;
+}
+
+.background_module {
+}
+
+.highlight {
+	color: #e73943;
+}
+
+.highlight hr {
+	border-color: solid #e73943;
+}
+
+.higlight_background {
+	background-color: #e73943;
+}
+
+.higlight_background_alpha {
+	background-color: rgba(231,57,67,0.5);
+}
+
+.education {
+	color: #392c19;
+}
+
+.education hr {
+	border-color: solid #392c19;
+}
+
+.education_background {
+	background-color: #392c19;
+}
+
+.education_background_alpha {
+	background-color: rgba(57,44,25,0.5);
+}
+
+.work {
+	color: #c5bdb2;
+}
+
+.work hr {
+	border-color: solid #c5bdb2;
+}
+
+.work_background {
+	background-color: #c5bdb2;
+}
+
+.work_background_alpha {
+	background-color: rgba(197,189,178,0.5);
+}
+
+.proyect {
+	color: #c4d19b;
+}
+
+.proyect hr {
+	border-color: solid #c4d19b;
+}
+
+.proyect_background {
+	background-color: #c4d19b;
+}
+
+.proyect_background_alpha {
+	background-color: rgba(196,209,155,0.5);
+}
