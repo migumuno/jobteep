@@ -5,9 +5,11 @@ if (isset($_GET['break'])) {
 	if (isset($_GET['id'])) {
 		$action = "?program=panel&menu=new_".$_POST['enum']."&id=".$_GET['id']."&action=insertElement&return=true";
 		$return = "?program=panel&menu=new_".$_POST['enum']."&id=".$_GET['id']."&return=true";
+		$MEMO = array();
 	} else {
 		$action = "?program=panel&menu=new_".$_POST['enum']."&action=insertElement&return=true";
 		$return = "?program=panel&menu=new_".$_POST['enum']."&return=true";
+		$MEMO = array();
 	}
 } else {
 	if(isset($_GET['id'])) {

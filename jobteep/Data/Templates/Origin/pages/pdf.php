@@ -118,8 +118,14 @@ if (count($trabajos) > 0) {
 		$pdf->SetFont('Arial','',10);
 		
 		//FORMATO FECHA
-		$start_date = $controller->getDateElement($v['start_date']);
-		$end_date = $controller->getDateElement($v['end_date']);
+		if (isset($v['start_date']))
+			$start_date = $controller->getDateElement($v['start_date']);
+		else
+			$start_date = '&nbsp';
+		if (isset($v['start_date']))
+			$end_date = $controller->getDateElement($v['end_date']);
+		else
+			$end_date = '&nbsp';
 		if ($start_date != '&nbsp' && $end_date == '&nbsp')
 			$end_date = 'Actualidad';
 		else if($start_date == '&nbsp' && $end_date == '&nbsp') {
@@ -167,8 +173,14 @@ if (count($formacion) > 0) {
 		$pdf->SetFont('Arial','',10);
 	
 		//FORMATO FECHA
-		$start_date = $controller->getDateElement($v['start_date']);
-		$end_date = $controller->getDateElement($v['end_date']);
+		if (isset($v['start_date']))
+			$start_date = $controller->getDateElement($v['start_date']);
+		else
+			$start_date = '&nbsp';
+		if (isset($v['end_date']))
+			$end_date = $controller->getDateElement($v['end_date']);
+		else
+			$end_date = '&nbsp';
 		if ($start_date != '&nbsp' && $end_date == '&nbsp')
 			$end_date = 'Actualidad';
 		else if($start_date == '&nbsp' && $end_date == '&nbsp') {
@@ -216,8 +228,14 @@ if (count($proyectos) > 0) {
 		$pdf->SetFont('Arial','',10);
 	
 		//FORMATO FECHA
-		$start_date = $controller->getDateElement($v['start_date']);
-		$end_date = $controller->getDateElement($v['end_date']);
+		if (isset($v['start_date']))
+			$start_date = $controller->getDateElement($v['start_date']);
+		else 
+			$start_date = '&nbsp';
+		if (isset($v['end_date']))
+			$end_date = $controller->getDateElement($v['end_date']);
+		else
+			$end_date = '&nbsp';
 		if ($start_date != '&nbsp' && $end_date == '&nbsp')
 			$end_date = 'Actualidad';
 		else if($start_date == '&nbsp' && $end_date == '&nbsp') {

@@ -1,6 +1,12 @@
 <?php 
-$fecha_ini = $proyect['start_date'];
-$fecha_fin = $proyect['end_date'];
+if (isset($proyect['start_date']))
+	$fecha_ini = $proyect['start_date'];
+else 
+	$fecha_ini = '';
+if (isset($proyect['end_date']))
+	$fecha_fin = $proyect['end_date'];
+else
+	$fecha_fin = '';
 $niveles_idiomas = array("A2", "B1", "B2", "C1", "C2");
 function orderImages ($num) {
 	$end = false;

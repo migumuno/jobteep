@@ -11,7 +11,7 @@ $controller = $_SESSION['SO']->getController();
 	    <meta name="description" content="<?php echo $program->getInfo('description'); ?>">
 		<meta name="keywords" content="<?php echo $program->getInfo('keywords'); ?>">
 		<meta name="author" content="Miguel Ángel Muñoz Viejo">
-		<!--[if IE]><link rel="shortcut icon" href="<?php echo $program->getDir() ?>img/favicon.ico"><![endif]-->
+		<link rel="shortcut icon" href="<?php echo $program->getDir() ?>img/favicon.ico">
 		<link rel="icon" href="<?php echo $program->getDir() ?>img/favicon.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo $program->getDir() ?>img/apple.png">
 		

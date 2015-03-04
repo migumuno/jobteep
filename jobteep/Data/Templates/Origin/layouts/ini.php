@@ -14,6 +14,7 @@
 	
 	//Obtención de elementos
 	$viajes = $controller->viajes();
+	$activities = $controller->activityLevels();
 	$aptitudes = $controller->aptitudes();
 	$idiomas = $controller->idiomas();
 	$cultura = $controller->cultura();
@@ -58,7 +59,7 @@
     <meta name="description" content="<?php echo $program->getInfo('description'); ?>">
 	<meta name="keywords" content="<?php echo $program->getInfo('keywords'); ?>">
 	<meta name="author" content="<?php echo $info['name'].' '.$info['surname'] ?>">
-	<!--[if IE]><link rel="shortcut icon" href="<?php echo $program->getDir() ?>img/favicon.ico"><![endif]-->
+	<link rel="shortcut icon" href="<?php echo $program->getDir() ?>img/favicon.ico">
 	<link rel="icon" href="<?php echo $program->getDir() ?>img/favicon.png">
 	<link rel="apple-touch-icon-precomposed" href="<?php echo $program->getDir() ?>img/apple.png">
 	<meta name="apple-mobile-web-app-capable" content="yes">

@@ -133,9 +133,9 @@ if(isset($_GET['id'])) {
 		    <div class="medium-6 columns">
 		      <label>Fecha de inicio
 		      <?php 
-				if ($MEMO['start_date'] == '0000-00-00')
+				if ($controller->getField ($MEMO, 'start_date') == '0000-00-00')
 					$MEMO['start_date'] = '';
-				if ($MEMO['end_date'] == '0000-00-00')
+				if ($controller->getField ($MEMO, 'end_date') == '0000-00-00')
 					$MEMO['end_date'] = '';
 		      	?>
 		        <input type="text" name = "start_date" id = "dp1" value = "<?php echo $controller->getField ($MEMO, 'start_date') ?>" placeholder="aaaa/mm/dd" />

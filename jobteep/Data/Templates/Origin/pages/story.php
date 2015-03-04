@@ -10,7 +10,7 @@
 		$pos_map = 0;
 	
 	if (count($timeline) < 3)
-		$pos_languages = $pos_activities;
+		$pos_languages = $pos_map;
 	else if (count($timeline) == 3)
 		$pos_languages = 2;
 	else if (count($timeline) > 3)
@@ -24,7 +24,7 @@
 		$pos_skills = 5;
 	
 	if (count($timeline) < 7)
-		$pos_activities = $pos_map;
+		$pos_activities = $pos_skills;
 	else if (count($timeline) == 7)
 		$pos_activities = 6;
 	else if (count($timeline) > 7)
@@ -69,8 +69,14 @@
 				break;
 		}
 		//Campos comunes
-		$fecha_ini = $timeline[$i]['content']['start_date'];
-		$fecha_fin = $timeline[$i]['content']['end_date'];
+		if (isset($timeline[$i]['content']['start_date']))
+			$fecha_ini = $timeline[$i]['content']['start_date'];
+		else
+			$fecha_ini = '';
+		if (isset($timeline[$i]['content']['end_date']))
+			$fecha_fin = $timeline[$i]['content']['end_date'];
+		else
+			$fecha_fin = '';
 		$description = html_entity_decode($timeline[$i]['content']['description']);
 		
 		if ($i == 0) 
