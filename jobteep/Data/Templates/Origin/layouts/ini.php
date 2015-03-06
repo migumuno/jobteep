@@ -79,6 +79,7 @@
 	<!-- LIGHTBOX -->
 	<script src="Libraries/lightbox/js/lightbox.min.js"></script>
 	<link href="Libraries/lightbox/css/lightbox.css" rel="stylesheet" />
+	<?php echo html_entity_decode(html_entity_decode($settings['analytics'], ENT_QUOTES), ENT_QUOTES); ?>
 	
 	<script>
 		$(document).ready(function () {
