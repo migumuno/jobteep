@@ -22,11 +22,13 @@ class Settings extends Entity {
 			"mtlculture",
 			"mtlsport",
 			"objetives",
-			"background"
+			"background",
+			"analytics"
 		);
 		$this->checks = array(
 			"none",
 			"int",
+			"none",
 			"none",
 			"none",
 			"none",

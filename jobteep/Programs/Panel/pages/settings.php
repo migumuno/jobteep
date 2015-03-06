@@ -16,11 +16,8 @@ $_SESSION['nameImg'] = 'background';
 <div class = "row">
 	<div class = "small-10 small-offset-1 columns panel">
 		<form data-abide method = "post" action = "?program=panel&menu=settings&action=updateElement&id=<?php echo $settings->getId(); ?>">
-			<div class = "row">
-				<div class = "large-12 columns">
-					<h3>Elige una plantilla</h3>
-				</div>
-			</div>
+			<fieldset>
+			<legend>Elige una plantilla</legend>
 			<div class = "row">
 				<div class = "large-6 columns">
 					<label>
@@ -41,11 +38,9 @@ $_SESSION['nameImg'] = 'background';
 					<a href = "?program=panel&menu=template&template=<?php echo $settings->get('template') ?>" class = "button">CONFIGURAR</a>
 				</div>
 			</div>
-			<div class = "row">
-				<div class = "large-12 columns">
-					<h3>Privacidad</h3>
-				</div>
-			</div>
+			</fieldset><br>
+			<fieldset>
+			<legend>Privacidad</legend>
 			<div class = "row">
 				<div class = "large-4 columns">
 					<label>Visibilidad de tu curriculum <small>Requerido</small>
@@ -62,11 +57,9 @@ $_SESSION['nameImg'] = 'background';
 					</label>
 				</div>
 			</div>
-			<div class = "row">
-				<div class = "large-12 columns">
-					<h3>Gráficos visibles</h3>
-				</div>
-			</div>
+			</fieldset><br>
+			<fieldset>
+			<legend>Gráficos visibles</legend>
 			<div class = "row">
 				<?php 
 				$names = array("Idiomas", "Aptitudes", "Actividades", "Cultura", "Aficiones", "Deporte", "Globalización", "Próximos Objetivos");
@@ -92,6 +85,18 @@ $_SESSION['nameImg'] = 'background';
 				}
 				?>
 			</div>
+			</fieldset>
+			<br>
+			<fieldset>
+			<legend>Analytics</legend>
+			<div class = "row">
+				<div class = "small-12 columns">
+					<label>Añade el script de analytics para poder controlar tu teep.
+			    	<textarea rows = "6" name = "analytics"><?php echo $settings->get('analytics') ?></textarea>
+			    	</label>
+				</div>
+			</div>
+			</fieldset><br>
 			<!-- <div class = "row">
 				<div class = "large-12 columns">
 					<h3>Personalización</h3>
@@ -117,7 +122,7 @@ $_SESSION['nameImg'] = 'background';
 			<br> -->
 			<input type = "hidden" name = "enum" value = "<?php echo $enum; ?>" />
 			<div class = "large-12 columns">
-				  <button class = "button success expand" type="submit">GUARDAR</button>
+				  <button class = "button expand" type="submit">GUARDAR</button>
 			</div>
 		</form>
 		<!-- <div class = "row">

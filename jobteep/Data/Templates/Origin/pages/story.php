@@ -245,7 +245,15 @@ echo '<div class = "contenedor_elemento">
 						echo '<div class = "aptitudes">';
 						for ($s = 0; $s < count($skills); $s++) {
 							echo '<div class = "medium-3 small-6 columns">';
-								echo '<div class = "small-12 columns idioma_sub tabla"><div class = "centrado">'.strtr(strtoupper($skills[$s]['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'</div></div>';
+								if (isset($skills[$s]['certificate']) && ($skills[$s]['certificate'] != ''))
+									echo '<a href = "Data/Users/'.$info['dir'].'/'.$skills[$s]['certificate'].'" data-lightbox="apt-elem-'.$s.'-'.$i.'" data-title="Certificado de la aptitud '.strtr(strtoupper($skills[$s]['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'">';
+								echo '<div id = "apt-elem-'.$s.'-'.$i.'" class = "small-12 columns idioma_sub tabla"><div class = "centrado">'.strtr(strtoupper($skills[$s]['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'</div></div>';
+								if (isset($skills[$s]['certificate']) && ($skills[$s]['certificate'] != '')) {
+									echo '<script>document.getElementById(\'apt-elem-'.$s.'-'.$i.'\').style.backgroundImage="url(\''.$program->getDir().'img/fondo_certificado.png\')";</script>';
+									echo '<script>document.getElementById(\'apt-elem-'.$s.'-'.$i.'\').style.backgroundRepeat="no-repeat";</script>';
+								}
+								if (isset($skills[$s]['certificate']) && ($skills[$s]['certificate'] != ''))
+									echo '</a>';
 								echo '<div class = "small-12 columns level">'.$apt_level[$skills[$s]['level']].'</div>';
 							echo '</div>';
 						}
@@ -288,7 +296,15 @@ echo'</div></div>';
 							echo '</div>';
 							foreach ($idiomas as $k => $v) {
 								echo '<div class = "medium-3 small-6 columns">';
-									echo '<div class = "small-12 columns idioma tabla"><div class = "centrado">'.strtr(strtoupper($v['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'</div></div>';
+									if (isset($v['certificate']) && ($v['certificate'] != ''))
+										echo '<a href = "Data/Users/'.$info['dir'].'/'.$v['certificate'].'" data-lightbox="lan-'.$k.'-'.$i.'" data-title="Certificado del idioma '.strtr(strtoupper($v['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'">';
+									echo '<div id = "lan-'.$k.'-'.$i.'" class = "small-12 columns idioma tabla"><div class = "centrado">'.strtr(strtoupper($v['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'</div></div>';
+									if (isset($v['certificate']) && ($v['certificate'] != '')) {
+										echo '<script>document.getElementById(\'lan-'.$k.'-'.$i.'\').style.backgroundImage="url(\''.$program->getDir().'img/fondo_certificado.png\')";</script>';
+										echo '<script>document.getElementById(\'lan-'.$k.'-'.$i.'\').style.backgroundRepeat="no-repeat";</script>';
+									}
+									if (isset($v['certificate']) && ($v['certificate'] != ''))
+										echo '</a>';
 									echo '<div class = "small-12 columns level">'.$lan_level[$v['level']].'</div>';
 								echo '</div>';
 							}
@@ -308,7 +324,15 @@ echo'</div></div>';
 						echo '<div class = "background_module"><div class = "row"><div id = "idiomas" class = "small-12 columns">';
 							foreach ($aptitudes as $k => $v) {
 								echo '<div class = "medium-3 small-6 columns">';
-									echo '<div class = "small-12 columns idioma tabla"><div class = "centrado">'.strtr(strtoupper($v['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'</div></div>';
+									if (isset($v['certificate']) && ($v['certificate'] != ''))
+										echo '<a href = "Data/Users/'.$info['dir'].'/'.$v['certificate'].'" data-lightbox="apt-'.$k.'-'.$i.'" data-title="Certificado de la aptitud '.strtr(strtoupper($v['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'">';
+									echo '<div id = "apt-'.$k.'-'.$i.'" class = "small-12 columns idioma tabla"><div class = "centrado">'.strtr(strtoupper($v['name']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'</div></div>';
+									if (isset($v['certificate']) && ($v['certificate'] != '')) {
+										echo '<script>document.getElementById(\'apt-'.$k.'-'.$i.'\').style.backgroundImage="url(\''.$program->getDir().'img/fondo_certificado.png\')";</script>';
+										echo '<script>document.getElementById(\'apt-'.$k.'-'.$i.'\').style.backgroundRepeat="no-repeat";</script>';
+									}
+									if (isset($v['certificate']) && ($v['certificate'] != ''))
+										echo '</a>';
 									echo '<div class = "small-12 columns level">'.$apt_level[$v['level']].'</div>';
 								echo '</div>';
 							}
@@ -398,7 +422,7 @@ echo'</div></div>';
 								foreach ($cultura as $k => $v) {
 									echo '<div class = "medium-3 small-6 columns">';
 									if (isset($v['img']) && $v['img'] != '') {
-											echo '<a href = "Data/Users/'.$info['dir'].'/'.$v['img'].'" data-lightbox="aficion'.$k.'" data-title="'.$v['title'].'"><div id = "culture'.$k.'" onmouseover = "mostrarCapa(\'txt_culture'.$k.'\')" onmouseleave = "ocultarCapa(\'txt_culture'.$k.'\')" class = "small-12 columns cultura"><div id = "txt_culture'.$k.'" class = "txt_culture tabla oculto"><div class = "centrado">'.strtr(strtoupper($v['category']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'<br>'.$v['title'].'</div></div></div></a>
+											echo '<a href = "Data/Users/'.$info['dir'].'/'.$v['img'].'" data-lightbox="aficion'.$k.'" data-title="'.$v['category'].' - '.$v['title'].'"><div id = "culture'.$k.'" onmouseover = "mostrarCapa(\'txt_culture'.$k.'\')" onmouseleave = "ocultarCapa(\'txt_culture'.$k.'\')" class = "small-12 columns cultura"><div id = "txt_culture'.$k.'" class = "txt_culture tabla oculto"><div class = "centrado">'.strtr(strtoupper($v['category']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'<br>'.$v['title'].'</div></div></div></a>
 										</div>';
 										echo '<script>document.getElementById(\'culture'.$k.'\').style.backgroundImage="url(\'Data/Users/'.$info['dir'].'/'.$v['img'].'\')";</script>';
 									} else {
@@ -430,7 +454,7 @@ echo'</div></div>';
 									foreach ($aficiones as $k => $v) {
 										echo '<div class = "medium-3 small-12 columns">';
 										if (isset($v['img']) && $v['img'] != '') {
-													echo '<a href = "Data/Users/'.$info['dir'].'/'.$v['img'].'" data-lightbox="aficion'.$k.'" data-title="'.$v['title'].'"><div id = "aficion'.$k.'" onmouseover = "mostrarCapa(\'txt_aficion'.$k.'\')" onmouseleave = "ocultarCapa(\'txt_aficion'.$k.'\')" class = "small-12 columns aficion"><div id = "txt_aficion'.$k.'" class = "txt_aficion tabla oculto"><div class = "centrado">'.strtr(strtoupper($v['category']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'<br>'.$v['title'].'</div></div></div></a>
+													echo '<a href = "Data/Users/'.$info['dir'].'/'.$v['img'].'" data-lightbox="aficion'.$k.'" data-title="'.$v['category'].' - '.$v['title'].'"><div id = "aficion'.$k.'" onmouseover = "mostrarCapa(\'txt_aficion'.$k.'\')" onmouseleave = "ocultarCapa(\'txt_aficion'.$k.'\')" class = "small-12 columns aficion"><div id = "txt_aficion'.$k.'" class = "txt_aficion tabla oculto"><div class = "centrado">'.strtr(strtoupper($v['category']), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ").'<br>'.$v['title'].'</div></div></div></a>
 												</div>';
 											echo '<script>document.getElementById(\'aficion'.$k.'\').style.backgroundImage="url(\'Data/Users/'.$info['dir'].'/'.$v['img'].'\')";</script>';
 										} else {

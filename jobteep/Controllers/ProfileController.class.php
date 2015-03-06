@@ -731,13 +731,13 @@ class ProfileController implements Controller {
 			foreach ($deporte as $k => $v) {
 				switch ($v['frequency']) {
 					case 0:
-						$points += 1;
+						$points += 1.1;
 						break;
 					case 1:
-						$points += 0.8;
+						$points += 1;
 						break;
 					case 2:
-						$points += 0.3;
+						$points += 0.5;
 						break;
 					case 3:
 						$points += 0.2;
