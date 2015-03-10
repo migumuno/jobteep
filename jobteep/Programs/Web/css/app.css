@@ -92,6 +92,7 @@ body {
 	letter-spacing: 2px;
 	pointer-events: auto;
 	float: left;
+	margin-top: 100px;
 }
 
 .main-title ul {
@@ -248,6 +249,7 @@ body {
 .logo {
 	font-family: "Open Sans",sans-serif;
 	text-transform: none;
+	color: #4c4c4c;
 }
 
 .socialFooter {
@@ -258,4 +260,8 @@ body {
 .label {
   width: 100%;
   padding-top: 10px;
+}
+
+.pattern {
+	background-image:url("../img/bg.jpg");
 }

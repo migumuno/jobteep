@@ -87,6 +87,102 @@ switch ($action) {
 			echo '<option value = "'.$row['name'].'">';
 		}
 		break;
+	case 'teepcard':
+		$info = $controller->getInfo($_GET['user']);
+		
+		header( "Content-type: image/png" );
+		header ("Content-Disposition: inline; filename=teepcard");
+		
+		//VARIABLES
+		$font_size = 200;
+		$nombre = $info['name'];
+		$apellidos = explode(' ', $info['surname']);
+		$margin = array(
+				"left" => "200",
+				"top" => "400"
+		);
+		$distance = 2260;
+		$width = 2700;
+		$height = 3500;
+		$font = 'Libraries/fonts/Sawasdee-Bold.ttf';
+		
+		//CREACIÓN DE IMAGEN CON COLOR DE FONDO
+		/*$image = imagecreate($width, $height);
+		$bg_color = imagecolorallocate($image, 201, 212, 111);*/
+		
+		//CREACIÓN DE IMAGEN CON IMAGEN DE FONDO
+		$image = imagecreatetruecolor($width, $height);
+		$bg = imagecreatefromjpeg('Libraries/ImgGenerator/colores.jpeg');
+		imagecopy($image, $bg, 0, 0, 0, 0, imagesx($bg), imagesy($bg));
+		
+		//COLORES
+		$negro = imagecolorallocate($image, 0, 0, 0);
+		$jobteep_dark = imagecolorallocate($image, 76, 76, 76);
+		$blanco = imagecolorallocate($image, 255, 255, 255);
+		$gris = imagecolorallocate($image, 168, 168, 168);
+		
+		/*imagecolortransparent($image, $negro);*/
+		
+		//TEXTOS
+		$text_color = $blanco;
+		//Nombre
+		imagefttext($image, $font_size, 0, $margin['left'], $margin['top'], $text_color, $font, $nombre);
+		for ($i = 0; $i < count($apellidos); $i++)
+			imagefttext($image, $font_size, 0, $margin['left'], $margin['top']*(2+$i), $text_color, $font, $apellidos[$i]);
+		//Profesión
+		$font_size = 80;
+		$profesion = $info['profession'];
+		$limit = 40;
+		if (strlen($profesion) > $limit) {
+			$profesion = explode(' ', $profesion);
+			$end = false;
+			$linea = 0;
+			$txt = array(
+				0 => '',
+				1 => ''
+			);
+			for ($i = 0; $i < count($profesion); $i++) {
+				while (!$end) {
+					if ((strlen($txt[$linea]) + strlen($profesion[$i]) + 1) <= $limit) {
+						if (strlen($txt[$linea]) == 0)
+							$txt[$linea] = $profesion[$i];
+						else 
+							$txt[$linea] .= ' '.$profesion[$i];
+						$end = true;
+					} else {
+						if ($linea == 0)
+							$linea = 1;
+						else 
+							$end = true;
+					}
+				}
+				$end = false;
+			}
+			imagefttext($image, $font_size, 0, $margin['left'], $distance, $text_color, $font, strtr(strtoupper(htmlspecialchars_decode($txt[0])), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"));
+			imagefttext($image, $font_size, 0, $margin['left'], $distance + 180, $text_color, $font, strtr(strtoupper(htmlspecialchars_decode($txt[1])), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"));
+		} else {
+			imagefttext($image, $font_size, 0, $margin['left'], $distance, $text_color, $font, strtr(strtoupper(htmlspecialchars_decode($profesion)), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"));
+			imagefttext($image, $font_size, 0, $margin['left'], $distance, $text_color, $font, '');
+		}
+		//Email
+		$email = 'E: '.$info['email'];
+		imagefttext($image, $font_size, 0, $margin['left'], $distance + (180*2), $text_color, $font, $email);
+		//Jobteep
+		$jobteep = 'J: /'.$info['domain'];
+		imagefttext($image, $font_size, 0, $margin['left'], $distance + (180*3), $text_color, $font, $jobteep);
+		//Teléfono
+		$telf = 'T: '.$info['telf1'];
+		imagefttext($image, $font_size, 0, $margin['left'], $distance + (180*4), $text_color, $font, $telf);
+		//Jobteep url
+		$telf = 'www.jobteep.com';
+		$font_size = 60;
+		$pos = ($width/2) - 339;
+		imagefttext($image, $font_size, 0, $pos, $distance + (180*6), $blanco, $font, $telf);
+		
+		//IMPRESIÓN DE IMAGEN
+		imagepng($image);
+		imagedestroy($image);
+		break;
 	case 'lnkdn':
 		$enums = array("experience", "education", "language", "skill", "proyect");
 		$campos = array(

@@ -41,6 +41,25 @@ class ProfileController implements Controller {
 		return $row;
 	}
 	
+	public function getInfo ($user) {
+		$where = 'id_user = '.$user;
+		$result = $_SESSION['SO']->select('info', '*', $where);
+		$row = $result->fetch_assoc();
+		//Nombre de usuario
+		$where = 'id_user = '.$row['id_user'];
+		$result2 = $_SESSION['SO']->select('user', '*', $where);
+		$user = $result2->fetch_assoc();
+		//Plantilla
+		$where = 'id_user = '.$row['id_user'];
+		$result3 = $_SESSION['SO']->select('settings', '*', $where);
+		$settings = $result3->fetch_assoc();
+		
+		$row['user'] = $user['user'];
+		$row['dir'] = $user['dir'];
+		$row['template'] = strtolower($settings['template']);
+		return $row;
+	}
+	
 	public function getSettings () {
 		$_SESSION['SO']->setBBDD('PANEL');
 		$where = 'id_user = '.$this->UID;
@@ -262,7 +281,7 @@ class ProfileController implements Controller {
 		for ($i = 0; $i < $result->num_rows; $i++) {
 			$result->data_seek($i);
 			$row = $result->fetch_assoc();
-			if (isset($row['start_date']) && $row['start_date'] != '' && $row['start_date'] != '0000-00-00') {
+			/*if (isset($row['start_date']) && $row['start_date'] != '' && $row['start_date'] != '0000-00-00') {*/
 				$trabajos[$i] = array();
 				$trabajos[$i]['id_experience'] = $row['id_experience'];
 				$trabajos[$i]['start_date'] = $row['start_date'];
@@ -323,7 +342,7 @@ class ProfileController implements Controller {
 						}
 					}
 				}
-			}
+			/*}*/
 		}
 		
 		return $trabajos;
@@ -338,7 +357,7 @@ class ProfileController implements Controller {
 		for ($i = 0; $i < $result->num_rows; $i++) {
 			$result->data_seek($i);
 			$row = $result->fetch_assoc();
-			if (isset($row['start_date']) && $row['start_date'] != '' && $row['start_date'] != '0000-00-00') {
+			/*if (isset($row['start_date']) && $row['start_date'] != '' && $row['start_date'] != '0000-00-00') {*/
 				$formacion[$i] = array();
 				$formacion[$i]['id_education'] = $row['id_education'];
 				$formacion[$i]['start_date'] = $row['start_date'];
@@ -401,7 +420,7 @@ class ProfileController implements Controller {
 						}
 					}
 				}
-			}
+			/*}*/
 		}
 		
 		return $formacion;

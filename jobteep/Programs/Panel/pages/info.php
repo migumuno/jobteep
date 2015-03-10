@@ -21,9 +21,9 @@ $_SESSION['nameImg'] = 'info';
 </div>
 <div class = "row">
 	<form name = "Intro" data-abide method = "post" action = "?program=panel&menu=info&action=updateElement&id=<?php echo $info->getId(); ?>" enctype="multipart/form-data">
-	<div class = "medium-10 medium-offset-1 columns panel">
+	<div class = "small-10 small-offset-1 columns panel">
 		<div class = "row">
-			<div class = "medium-12 columns">
+			<div class = "small-12 columns">
 				<fieldset>
 				<legend>Elige los sectores con los que te identificas</legend>
 				<div id = "info_sectores" class = "medium-12 columns">

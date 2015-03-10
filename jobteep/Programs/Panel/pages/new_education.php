@@ -36,7 +36,7 @@ $_SESSION['nameImg'] = $fecha.$enum;
 					<label>Tipo de Formación <small>Importante</small>
 						<select name = "qualification">
 			  				<?php 
-			  				$qualifications = array("...", "Educación Secundaria", "Curso", "FP Media", "Máster", "Doctorado", "FP Superior", "Carrera");
+			  				$qualifications = array("Otros títulos", "Enseñanza Secundaria", "Enseñanza Superior", "FP Media", "FP Superior", "Licenciatura", "Grado", "Ingeniería técnica", "Ingeniería superior", "Curso", "Máster", "Doctorado");
 			  				for ($i = 0; $i < count($qualifications); $i++) {
 								echo '<option value = "'.$i.'" ';
 								if ($controller->getField ($MEMO, 'qualification') == $i) echo ' selected';

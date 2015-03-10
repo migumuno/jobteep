@@ -14,7 +14,7 @@
 		<title>The Jobfeel | Página no encontrada</title>
 		<description>Reinventa tu curriculum.</description>
 		<keywords>entrar the jobfeel, the jobfeel, jobteep, acceso jobteep, curriculum</keywords>
-		<layout>layouts/profile.php</layout>
+		<layout>layouts/ini.php</layout>
 		<css>css/foundation.css</css>
 		<content>pages/error.php</content>
 	</page>
@@ -26,5 +26,14 @@
 		<layout>layouts/pdf.php</layout>
 		<css>css/foundation.css</css>
 		<content>pages/pdf.php</content>
+	</page>
+	<page>
+		<name>teepcard</name>
+		<title>The Jobfeel | Login</title>
+		<description>Reinventa tu curriculum.</description>
+		<keywords>entrar the jobfeel, the jobfeel, jobteep, acceso jobteep, curriculum</keywords>
+		<layout>layouts/teepcard.php</layout>
+		<css>css/foundation.css</css>
+		<content>pages/story.php</content>
 	</page>
 </pages>

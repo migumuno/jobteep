@@ -6,6 +6,60 @@
 	src: url(../fonts/HelveticaNeueLTPro-L.otf);
 }
 
+@font-face {
+	font-family: Sawasdee;
+	src: url(../../../Libraries/fonts/Sawasdee.ttf);
+}
+
+@font-face {
+	font-family: AlexBrush;
+	src: url(../../../Libraries/fonts/AlexBrush.ttf);
+}
+
+@font-face {
+	font-family: ExoRegular;
+	src: url(../../../Libraries/fonts/ExoRegular.otf);
+}
+
+@font-face {
+	font-family: KaushanScript;
+	src: url(../../../Libraries/fonts/KaushanScript.otf);
+}
+
+@font-face {
+	font-family: Purisa;
+	src: url(../../../Libraries/fonts/Purisa.ttf);
+}
+
+@font-face {
+	font-family: QuicksandDash;
+	src: url(../../../Libraries/fonts/QuicksandDash.otf);
+}
+
+.Sawasdee {
+	font-family: 'Sawasdee', sans-serif;
+}
+
+.AlexBrush {
+	font-family: 'AlexBrush', sans-serif;
+}
+
+.ExoRegular {
+	font-family: 'ExoRegular', sans-serif;
+}
+
+.KaushanScript {
+	font-family: 'KaushanScript', sans-serif;
+}
+
+.Purisa {
+	font-family: 'Purisa', sans-serif;
+}
+
+.QuicksandDash {
+	font-family: 'QuicksandDash', sans-serif;
+}
+
 body {
 	/*background-image: url("../img/bg.jpg");
 	background-attachment: fixed;
@@ -260,7 +314,7 @@ ul.off-canvas-list {
 
 #cabecera h1{
 	color: #333333;
-	text-shadow: 1px 1px #333333;
+	/*text-shadow: 1px 1px #333333;*/
 }
 
 
@@ -405,4 +459,8 @@ ul.off-canvas-list {
 	text-align: center;
 	color: #fff;
 	font-size: 1.5em;
+}
+
+.teepcard {
+	margin-bottom: 10px;
 }

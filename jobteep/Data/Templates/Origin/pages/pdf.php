@@ -42,7 +42,7 @@ $pdf->MultiCell(115, 6, utf8_decode($info['name']. ' '.$info['surname']));
 //Qué eres
 $pdf->SetXY(80,$pdf->GetY()+1);
 $pdf->SetFont('Arial','',10);
-$pdf->MultiCell(115, 6, utf8_decode($info['profession']));
+$pdf->MultiCell(115, 6, utf8_decode(htmlspecialchars_decode($info['profession'])));
 
 //Slogan
 $pdf->SetXY(80,$pdf->GetY()+1);

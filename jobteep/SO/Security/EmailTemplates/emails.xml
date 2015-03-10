@@ -2,12 +2,12 @@
 <emails>
 	<email>
 		<name>confirm</name>
-		<subject>!Bienvenido a The Jobfeel!</subject>
+		<subject>!Bienvenido a JobTeep!</subject>
 		<body>SO/Security/EmailTemplates/confirm.html</body>
 	</email>
 	<email>
 		<name>recover</name>
-		<subject>The Jobfeel - Recuperación de contraseña</subject>
+		<subject>JobTeep - Recuperación de contraseña</subject>
 		<body>SO/Security/EmailTemplates/recover.html</body>
 	</email>
 </emails>

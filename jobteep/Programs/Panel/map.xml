@@ -2,27 +2,27 @@
 <pages>
 	<page>
 		<name>default</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<content>pages/welcome.php</content>
 	</page>
 	<page>
 		<name>error</name>
-		<title>The Jobfeel | Página no encontrada</title>
+		<title>Jobteep | Página no encontrada</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/error.php</layout>
 		<css>css/foundation.css</css>
 		<content>pages/error.php</content>
 	</page>
 	<page>
 		<name>info</name>
-		<title>The Jobfeel | Información</title>
+		<title>Jobteep | Información</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>info</enum>
@@ -30,7 +30,7 @@
 	</page>
 	<page>
 		<name>knowledge</name>
-		<title>The Jobfeel | Conocimientos</title>
+		<title>Jobteep | Conocimientos</title>
 		<description>Todo lo que una persona ha aprendido.</description>
 		<keywords>formacion, idiomas, habilidades, skill, language, education</keywords>
 		<layout>layouts/panel.php</layout>
@@ -40,7 +40,7 @@
 	</page>
 	<page>
 		<name>experiences</name>
-		<title>The Jobfeel | Vivencias</title>
+		<title>Jobteep | Vivencias</title>
 		<description>Acontecimientos que aportan algo al crecimiento personal.</description>
 		<keywords>trabajos, viajes, job, travel, experience, vivencia</keywords>
 		<layout>layouts/panel.php</layout>
@@ -50,7 +50,7 @@
 	</page>
 	<page>
 		<name>inspiration</name>
-		<title>The Jobfeel | Inspiración</title>
+		<title>Jobteep | Inspiración</title>
 		<description>Lo que te inspira para crear cosas nuevas y mejores.</description>
 		<keywords>cultura, culture, deporte, sport, actividades, activity, personas, people</keywords>
 		<layout>layouts/panel.php</layout>
@@ -60,7 +60,7 @@
 	</page>
 	<page>
 		<name>creations</name>
-		<title>The Jobfeel | Creaciones</title>
+		<title>Jobteep | Creaciones</title>
 		<description>Lo que has conseguido crear y los errores que has cometido.</description>
 		<keywords>proyectos, projects, logros, achievements, arte, art</keywords>
 		<layout>layouts/panel.php</layout>
@@ -70,7 +70,7 @@
 	</page>
 	<page>
 		<name>wishes</name>
-		<title>The Jobfeel | Deseos</title>
+		<title>Jobteep | Deseos</title>
 		<description>Lo que quieres llegar a alcanzar.</description>
 		<keywords>deseso, wishes, objetivos, objetives, company, empresas</keywords>
 		<layout>layouts/panel.php</layout>
@@ -80,9 +80,9 @@
 	</page>
 	<page>
 		<name>facebook</name>
-		<title>The Jobfeel | Facebook</title>
+		<title>Jobteep | Facebook</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>facebook</enum>
@@ -90,9 +90,9 @@
 	</page>
 	<page>
 		<name>profile</name>
-		<title>The Jobfeel | Perfil</title>
+		<title>Jobteep | Perfil</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>profile</enum>
@@ -100,9 +100,9 @@
 	</page>
 	<page>
 		<name>intro</name>
-		<title>The Jobfeel | Step 2</title>
+		<title>Jobteep | Step 2</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/intro.php</layout>
 		<css>css/foundation.css</css>
 		<enum>info</enum>
@@ -110,9 +110,9 @@
 	</page>
 	<page>
 		<name>new_experience</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>experience</enum>
@@ -120,9 +120,9 @@
 	</page>
 	<page>
 		<name>experience</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>experience</enum>
@@ -130,9 +130,9 @@
 	</page>
 	<page>
 		<name>new_education</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>education</enum>
@@ -140,9 +140,9 @@
 	</page>
 	<page>
 		<name>education</name>
-		<title>The Jobfeel | Education</title>
+		<title>Jobteep | Education</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>education</enum>
@@ -150,9 +150,9 @@
 	</page>
 	<page>
 		<name>new_proyect</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>proyect</enum>
@@ -160,9 +160,9 @@
 	</page>
 	<page>
 		<name>proyect</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>proyect</enum>
@@ -170,9 +170,9 @@
 	</page>
 	<page>
 		<name>new_proyectimg</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>proyectimg</enum>
@@ -180,9 +180,9 @@
 	</page>
 	<page>
 		<name>proyectimg</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>proyectimg</enum>
@@ -190,9 +190,9 @@
 	</page>
 	<page>
 		<name>new_activity</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>activity</enum>
@@ -200,9 +200,9 @@
 	</page>
 	<page>
 		<name>activity</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>activity</enum>
@@ -210,9 +210,9 @@
 	</page>
 	<page>
 		<name>new_travel</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>travel</enum>
@@ -220,9 +220,9 @@
 	</page>
 	<page>
 		<name>travel</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>travel</enum>
@@ -230,9 +230,9 @@
 	</page>
 	<page>
 		<name>new_language</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>language</enum>
@@ -240,9 +240,9 @@
 	</page>
 	<page>
 		<name>language</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>language</enum>
@@ -250,9 +250,9 @@
 	</page>
 	<page>
 		<name>new_skill</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>skill</enum>
@@ -260,9 +260,9 @@
 	</page>
 	<page>
 		<name>skill</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>skill</enum>
@@ -270,9 +270,9 @@
 	</page>
 	<page>
 		<name>new_wish</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>wish</enum>
@@ -280,9 +280,9 @@
 	</page>
 	<page>
 		<name>mtl</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtl</enum>
@@ -290,9 +290,9 @@
 	</page>
 	<page>
 		<name>new_mtl</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtl</enum>
@@ -300,9 +300,9 @@
 	</page>
 	<page>
 		<name>mtlart</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlart</enum>
@@ -310,9 +310,9 @@
 	</page>
 	<page>
 		<name>new_mtlart</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlart</enum>
@@ -320,9 +320,9 @@
 	</page>
 	<page>
 		<name>mtlculture</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlculture</enum>
@@ -330,9 +330,9 @@
 	</page>
 	<page>
 		<name>new_mtlculture</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlculture</enum>
@@ -340,9 +340,9 @@
 	</page>
 	<page>
 		<name>mtlgeek</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlgeek</enum>
@@ -350,9 +350,9 @@
 	</page>
 	<page>
 		<name>new_mtlgeek</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlgeek</enum>
@@ -360,9 +360,9 @@
 	</page>
 	<page>
 		<name>mtlsport</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlsport</enum>
@@ -370,9 +370,9 @@
 	</page>
 	<page>
 		<name>new_mtlsport</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>mtlsport</enum>
@@ -380,9 +380,9 @@
 	</page>
 	<page>
 		<name>upgrade</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>upgrade</enum>
@@ -390,9 +390,9 @@
 	</page>
 	<page>
 		<name>publications</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>publications</enum>
@@ -400,9 +400,9 @@
 	</page>
 	<page>
 		<name>article</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>article</enum>
@@ -410,9 +410,9 @@
 	</page>
 	<page>
 		<name>new_article</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>article</enum>
@@ -420,9 +420,9 @@
 	</page>
 	<page>
 		<name>blog</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>blog</enum>
@@ -430,9 +430,9 @@
 	</page>
 	<page>
 		<name>new_blog</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>blog</enum>
@@ -440,9 +440,9 @@
 	</page>
 	<page>
 		<name>forum</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>forum</enum>
@@ -450,9 +450,9 @@
 	</page>
 	<page>
 		<name>new_forum</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>forum</enum>
@@ -460,9 +460,9 @@
 	</page>
 	<page>
 		<name>settings</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>settings</enum>
@@ -470,9 +470,9 @@
 	</page>
 	<page>
 		<name>template</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>template</enum>
@@ -480,9 +480,9 @@
 	</page>
 	<page>
 		<name>share</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/panel.php</layout>
 		<css>css/foundation.css</css>
 		<enum>share</enum>
@@ -490,12 +490,22 @@
 	</page>
 	<page>
 		<name>formulario</name>
-		<title>The Jobfeel | Panel</title>
+		<title>Jobteep | Panel</title>
 		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
-		<keywords>crear curriculum, panel jobteep, the jobfeel, jobteep, curriculum</keywords>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
 		<layout>layouts/intro.php</layout>
 		<css>css/foundation.css</css>
 		<enum>formulario</enum>
 		<content>pages/formulario.php</content>
+	</page>
+	<page>
+		<name>teepcard</name>
+		<title>Jobteep | Teepcards</title>
+		<description>Plataforma para crear tu curriculum de una forma diferente. Podrás tener alamcenados todos tus datos y nunca perderlos. Además puedes actualizarlos desde donde quieras.</description>
+		<keywords>crear curriculum, panel jobteep, Jobteep, jobteep, curriculum</keywords>
+		<layout>layouts/panel.php</layout>
+		<css>css/foundation.css</css>
+		<enum>formulario</enum>
+		<content>pages/teepcards.php</content>
 	</page>
 </pages>

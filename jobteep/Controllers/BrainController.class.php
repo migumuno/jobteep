@@ -1391,7 +1391,7 @@ class BrainController implements Controller {
 		$education = array();
 		$from = "education";
 		$where = 'id_user = '.$this->user.' AND version = '.$this->version;
-		$qualifications = array("...", "Educación Secundaria", "Curso", "FP Media", "Máster", "Doctorado", "FP Superior", "Carrera");
+		$qualifications = array("Otros títulos", "Enseñanza Secundaria", "Enseñanza Superior", "FP Media", "FP Superior", "Licenciatura", "Grado", "Ingeniería técnica", "Ingeniería superior", "Curso", "Máster", "Doctorado");
 		$_SESSION['SO']->setBBDD('PANEL');
 		$result = $_SESSION['SO']->select ($from, '*', $where);
 		for ($i = 0; $i < $result->num_rows; $i++) {

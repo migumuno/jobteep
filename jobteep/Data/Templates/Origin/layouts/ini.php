@@ -325,7 +325,7 @@
 			echo $info['name'].' '.$info['surname'].'<br>';
 			/*<img alt = "email '.$info['name'].' '.$info['surname'].'" src = "Libraries/ImgGenerator/txt.php?txt='.$info['email'].'>*/
 			if (isset($info['email']) && $info['email'] != '')
-				echo 'EMAIL: <a href = "mailto:'.$info['email'].'" itemprop="email">'.$info['email'].'</a><br>';
+				echo 'EMAIL: <a href = "mailto:'.$info['email'].'" itemprop="email"><img alt="email" src = "Libraries/ImgGenerator/email.php?txt='.$info['email'].'"></a><br>';
 			if (isset($info['telf1']) && $info['telf1'] != '')
 				echo 'TELF.: '.$info['telf1'];
 			?>

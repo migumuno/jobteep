@@ -234,7 +234,7 @@ unset($controller);
 		</div>
 		<div id="modalLinkedin" class="reveal-modal" data-reveal>
 		  <h2>Linkedin</h2>
-		  <p class="lead">Necesitamos que te conectes a tu cuenta de Linkedin para copiar los datos a tu perfil.</p>
+		  <p class="lead">Si usas iOS, recarga la página una vez te autentifiques y vuelve a sincronizar. Necesitamos que te conectes a tu cuenta de Linkedin para copiar los datos a tu perfil.</p>
 		  <script type="IN/Login" data-onAuth="onAuthLinkedin"></script>
 		</div>
 		<div id="connected" class="reveal-modal" data-reveal>
@@ -250,18 +250,19 @@ unset($controller);
   					<div class="inner-wrap">
   						<div class = "row">
 	  						<div class = "large-10 large-offset-1 columns">
-	  							<div class = "small-6 columns">
-	  								<h1><a id = "secondStop" href = "?program=panel"><strong>JOB</strong>Teep</a> <a class="left-off-canvas-toggle" href="#"><img id = "thirdStop" src = "<?php echo $program->getDir() . "/img/menu_black.png" ?>" width = "40px"></a></h1>
+	  							<div class = "small-8 columns">
+	  								<h1><a id = "secondStop" href = "?program=panel"><img src = "<?php echo $program->getDir() ?>img/logo.png" width = "50" alt = "logo jobteep"> JobTeep</a> <a class="left-off-canvas-toggle" href="#"><img id = "thirdStop" src = "<?php echo $program->getDir() . "/img/menu_black.png" ?>" width = "40px"></a></h1>
 	  							</div>
-	  							<div class = "small-6 columns">
+	  							<div class = "small-4 columns">
 	  								<div class = "visualizar text-right"><a id = "recorrido" href="#"><img id = "seventhStop" alt = "jobteep" src = "<?php echo $program->getDir() . "/img/question.png" ?>" width = "30px"></a></div>
 	  							</div>
 	  						</div>
 	  					</div>
 	  					<aside class="left-off-canvas-menu">
-	  						  <h1 class = "text-center"><strong>JOB</strong>Teep <a class="left-off-canvas-toggle" href="#"><img src = "<?php echo $program->getDir() . "/img/menu_black.png" ?>" width = "40px"></a></h1>
+	  						  <h1 class = "text-center"><img src = "<?php echo $program->getDir() ?>img/logo.png" width = "50" alt = "logo jobteep"> JobTeep <a class="left-off-canvas-toggle" href="#"><img src = "<?php echo $program->getDir() . "/img/menu_black.png" ?>" width = "40px"></a></h1>
 					    	  <ul class="off-canvas-list">
-								<li><a id = "fourthStop" href="/<?php echo $info->get('domain') ?>" target = "_blank"><span><img alt = "jobteep" src = "<?php echo $program->getDir() . "/img/view.png" ?>" width = "30px"></span>&nbsp;&nbsp; Ver Curriculum</a></li>
+								<li><a id = "fourthStop" href="/<?php echo $info->get('domain') ?>" target = "_blank"><span><img alt = "teep" src = "<?php echo $program->getDir() . "/img/view.png" ?>" width = "30px"></span>&nbsp;&nbsp; Ver Curriculum</a></li>
+								<?php if ($_SESSION['SO']->getUID() == 1) { ?><li><a id = "fourthStop" href="/<?php echo $info->get('domain') ?>/teepcard" target = "_blank"><span><img alt = "teepcard" src = "<?php echo $program->getDir() . "/img/teepcard.png" ?>" width = "30px"></span>&nbsp;&nbsp; Ver Teepcard</a></li><?php } ?>
 								<li><a id = "fifthStop" href="#" onclick = "instertData()"><span><img alt = "jobteep" src = "<?php echo $program->getDir() . "/img/sync.png" ?>" width = "30px"></span>&nbsp;&nbsp; Sincronizar con Linkedin</a></li>
 								<li><a id = "sixthStop" href="?program=panel&menu=settings"><span><img alt = "jobteep" src = "<?php echo $program->getDir() . "/img/settings.png" ?>" width = "30px"></span>&nbsp;&nbsp; Settings</a></li>
 								<li><a href="/<?php echo $info->get('domain'); ?>/PDF" target = "_blank"><span><img alt = "jobteep" src = "<?php echo $program->getDir() . "/img/print.png" ?>" width = "30px"></span>&nbsp;&nbsp; Imprimir</a></li>

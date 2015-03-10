@@ -98,14 +98,14 @@ $controller = $_SESSION['SO']->getController();
 		</script>
 	</head>
 	<body>
-		<div id="videoModal" class="reveal-modal large" data-reveal="" display: block; opacity: 1;">
+		<!-- <div id="videoModal" class="reveal-modal large" data-reveal="" display: block; opacity: 1;">
 		  <br>
 		  <div class="flex-video widescreen vimeo" style="display: block;">
 		    <iframe width="1280" height="720" src="http://www.youtube-nocookie.com/embed/kn-1D5z3-Cs?rel=0" frameborder="0" allowfullscreen="" data-src="http://www.youtube-nocookie.com/embed/kn-1D5z3-Cs?rel=0"></iframe>
 		  </div>
 		
 		  <a class="close-reveal-modal">&#215;</a>
-		</div>
+		</div> -->
 		
 		<div id="mask">   
             <div class="loader">
@@ -117,13 +117,18 @@ $controller = $_SESSION['SO']->getController();
         
 		<!-- <section id="home-fullWidth" class="clear"> -->
           
-        <section id="home" class="clear">
+        <!-- <section id="home" class="clear">
             <div>
             	<div class="mk-video-mask"></div>
             	<a href="#anchor2" id = "bajar"></a>
             	<a id="video-volume" onclick="$('#bgndVideo').toggleVolume()"><i class="icon-volume-down"></i></a>
-            	<!-- Video Background - Here you need to replace the videoURL with your youtube video URL -->
                 <a id="bgndVideo" class="player mb_YTVPlayer" data-property="{videoURL:'http://www.youtube.com/watch?v=kn-1D5z3-Cs',containment:'body',autoPlay:true, mute:false, startAt:0, opacity:1}" style="display: none; background-image: none; background-position: initial initial; background-repeat: initial initial;" title="Lamborghini Aventador LP700-4 Official Commercial [1080P]">youtube</a>
+            </div>
+        </section> -->
+        
+        <section id="home" class="clear">
+            <div class="pattern">
+               
             </div>
         </section>
         
@@ -131,7 +136,7 @@ $controller = $_SESSION['SO']->getController();
             <div class="title-container">
                	<div class = "formulario">
                		<div id = "form_content">
-               			<h1>JOBTeep</h1><br>
+               			<h1>Jobteep</h1><br>
                			<?php 
                			if (!isset($_GET['menu']) || $_GET['menu'] == 'login')
                				include $program->getDir().'pages/login.php';
@@ -149,14 +154,16 @@ $controller = $_SESSION['SO']->getController();
 						<span id = "close"><img id = "rotate" alt = "abierto" src = "<?php echo $program->getDir() ?>img/close.png" width = "30"></span>
 					</div>
                	</div>
-               	<!-- <div id = "frases">
-               		<div class="welcome">Bienvenido</div>
-	                <ul>
-	                    <li class="t-current">Estrena tu mejor versión</li>
-	                    <li>We Are Smart</li>
-	                    <li>We Are Fresh</li>
-	                </ul>
-               	</div> -->
+               	<div class = "show-for-large-up">
+	               	<div id = "frases">
+	               		<div class="welcome">Bienvenido</div>
+		                <ul>
+		                    <li class="t-current">Estrena tu mejor versión</li>
+		                    <li>Potencia lo mejor de ti</li>
+		                    <li>Deja que te encuentren</li>
+		                </ul>
+	               	</div>
+	            </div>
         	</div>
         </div>
 		

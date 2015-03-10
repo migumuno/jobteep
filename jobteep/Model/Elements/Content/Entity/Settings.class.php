@@ -23,11 +23,19 @@ class Settings extends Entity {
 			"mtlsport",
 			"objetives",
 			"background",
-			"analytics"
+			"analytics",
+			"teepcardTxtColor",
+			"teepcardImg",
+			"teepcardFont",
+			"teepcardFontSize"
 		);
 		$this->checks = array(
 			"none",
 			"int",
+			"none",
+			"none",
+			"none",
+			"none",
 			"none",
 			"none",
 			"none",

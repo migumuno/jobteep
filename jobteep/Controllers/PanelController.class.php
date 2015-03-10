@@ -43,6 +43,25 @@ class PanelController implements Controller {
 		$this->enum = $enum;
 	}
 	
+	public function getInfo ($user) {
+		$where = 'id_user = '.$user;
+		$result = $_SESSION['SO']->select('info', '*', $where);
+		$row = $result->fetch_assoc();
+		//Nombre de usuario
+		$where = 'id_user = '.$row['id_user'];
+		$result2 = $_SESSION['SO']->select('user', '*', $where);
+		$user = $result2->fetch_assoc();
+		//Plantilla
+		$where = 'id_user = '.$row['id_user'];
+		$result3 = $_SESSION['SO']->select('settings', '*', $where);
+		$settings = $result3->fetch_assoc();
+	
+		$row['user'] = $user['user'];
+		$row['dir'] = $user['dir'];
+		$row['template'] = strtolower($settings['template']);
+		return $row;
+	}
+	
 	public function insertElement ($array = null) {
 		if (!isset($array))
 			$array = $_POST;
@@ -104,8 +123,8 @@ class PanelController implements Controller {
 	}
 	
 	private function checkFiles ($VALUES=null, $mode) {
-		$enums = array("education", "language", "skill", "proyectimg", "mtlart");
-		$fields = array("certificate", "certificate", "certificate", "file", "img");
+		$enums = array("education", "language", "skill", "proyectimg", "mtlart", "settings", "travel", "mtlculture");
+		$fields = array("certificate", "certificate", "certificate", "file", "img", "teepcardImg", "img", "img");
 		if (in_array($this->enum, $enums)) {
 			$pos = array_search($this->enum, $enums);
 			$obj = $this->selectSingleElement ();
@@ -144,6 +163,8 @@ class PanelController implements Controller {
 			$_SESSION['SO']->executeInstruction ('updateElement', $obj);
 			$this->learnData();
 			$this->updateRelation ();
+			if ($this->enum == 'settings')
+				$this->createTeepcard();
 			$this->onError('Datos actualizados correctamente!');
 		} catch (Exception $e) {
 			$this->onError($e->getMessage());
@@ -533,7 +554,163 @@ class PanelController implements Controller {
 				}
 			break;
 		}
-	} 
+	}
+	
+	private function createTeepcard() {
+		$info = $this->getInfo($_SESSION['SO']->getUID());
+		
+		/*header( "Content-type: image/jpeg" );*/
+		/*header ("Content-Disposition: inline; filename=teepcard");*/
+		
+		//VARIABLES
+		if (isset($_POST['teepcardFontSize']) && $_POST['teepcardFontSize'] != '')
+			$font_size = $_POST['teepcardFontSize'] * 10;
+		else
+			$font_size = 200;
+		$nombre = $info['name'];
+		$apellidos = explode(' ', $info['surname']);
+		$margin = array(
+				"left" => "200",
+				"top" => "400"
+		);
+		$distance = 2260;
+		$width = 2700;
+		$height = 3500;
+		if (isset($_POST['teepcardFont']) && $_POST['teepcardFont'] != '')
+			$font = 'Libraries/fonts/'.$_POST['teepcardFont'];
+		else
+			$font = 'Libraries/fonts/Sawasdee.ttf';
+		
+		//CREACIÓN DE IMAGEN
+		$fondo = false;
+		$bg = imagecreatefromjpeg('Data/Users/'.$_SESSION['SO']->getUserInfo ('dir').'/teepcardImg.jpg');
+		if ($bg == false) {
+			$bg = imagecreatefrompng('Data/Users/'.$_SESSION['SO']->getUserInfo ('dir').'/teepcardImg.png');
+			if ($bg == false) {
+				$bg = imagecreatefromgif('Data/Users/'.$_SESSION['SO']->getUserInfo ('dir').'/teepcardImg.gif');
+					if ($bg == false) {
+						$image = imagecreate($width, $height);
+						$bg_color = imagecolorallocate($image, 201, 212, 111);
+					} else
+						$fondo = true;
+			} else
+				$fondo = true;
+		} else
+			$fondo = true;
+		
+		if ($fondo) {
+			$image = imagecreatetruecolor($width, $height);
+			/*imagecopy($image, $bg, 0, 0, 0, 0, imagesx($bg), imagesy($bg));*/
+			imagecopyresized($image, $bg, 0, 0, 0, 0, 2700, 3500, imagesx($bg), imagesy($bg));
+		}
+		
+		//COLORES
+		$negro = imagecolorallocate($image, 0, 0, 0);
+		$jobteep_dark = imagecolorallocate($image, 76, 76, 76);
+		$blanco = imagecolorallocate($image, 255, 255, 255);
+		$gris = imagecolorallocate($image, 168, 168, 168);
+		
+		/*imagecolortransparent($image, $negro);*/
+		
+		//TEXTOS
+		$text_color = $jobteep_dark;
+		if (isset($_POST['teepcardTxtColor'])) {
+			switch ($_POST['teepcardTxtColor']) {
+				case "blanco":
+					$text_color = $blanco;
+					break;
+				case "negro":
+					$text_color = $negro;
+					break;
+				case "gris":
+					$text_color = $gris;
+					break;
+				default:
+					$text_color = $jobteep_dark;
+			}
+		}
+		
+		//Nombre
+		imagefttext($image, $font_size, 0, $margin['left'], $margin['top'], $text_color, $font, $nombre);
+		for ($i = 0; $i < count($apellidos); $i++)
+			imagefttext($image, $font_size, 0, $margin['left'], $margin['top']*(2+$i), $text_color, $font, $apellidos[$i]);
+		//Profesión
+		$font_size = $font_size / 2.5;
+		$profesion = $info['profession'];
+		$limit = 40;
+		if (strlen($profesion) > $limit) {
+			$profesion = explode(' ', $profesion);
+			$end = false;
+			$linea = 0;
+			$txt = array(
+				0 => '',
+				1 => ''
+			);
+			for ($i = 0; $i < count($profesion); $i++) {
+				while (!$end) {
+					if ((strlen($txt[$linea]) + strlen($profesion[$i]) + 1) <= $limit) {
+						if (strlen($txt[$linea]) == 0)
+							$txt[$linea] = $profesion[$i];
+						else 
+							$txt[$linea] .= ' '.$profesion[$i];
+						$end = true;
+					} else {
+						if ($linea == 0)
+							$linea = 1;
+						else 
+							$end = true;
+					}
+				}
+				$end = false;
+			}
+			imagefttext($image, $font_size, 0, $margin['left'], $distance, $text_color, $font, strtr(strtoupper(htmlspecialchars_decode($txt[0])), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"));
+			imagefttext($image, $font_size, 0, $margin['left'], $distance + 180, $text_color, $font, strtr(strtoupper(htmlspecialchars_decode($txt[1])), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"));
+		} else {
+			imagefttext($image, $font_size, 0, $margin['left'], $distance, $text_color, $font, strtr(strtoupper(htmlspecialchars_decode($profesion)), "àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ"));
+			imagefttext($image, $font_size, 0, $margin['left'], $distance, $text_color, $font, '');
+		}
+		//Email
+		$email = 'E: '.$info['email'];
+		imagefttext($image, $font_size, 0, $margin['left'], $distance + (180*2), $text_color, $font, $email);
+		//Jobteep
+		$jobteep = 'J: /'.$info['domain'];
+		imagefttext($image, $font_size, 0, $margin['left'], $distance + (180*3), $text_color, $font, $jobteep);
+		//Teléfono
+		$telf = 'T: '.$info['telf1'];
+		imagefttext($image, $font_size, 0, $margin['left'], $distance + (180*4), $text_color, $font, $telf);
+		//Jobteep url
+		$jobteep_url = 'www.jobteep.com';
+		$font_size = 80;
+		$pos = ($width/2) - 539;
+		imagefttext($image, $font_size, 0, $pos, $distance + (180*6), $blanco, $font, $jobteep_url);
+		
+		//IMPRESIÓN DE IMAGEN
+		$dev = imagejpeg($image, 'Data/Users/'.$_SESSION['SO']->getUserInfo ('dir').'/teepcard.jpg');
+		imagedestroy($image);
+	}
+	
+	public function getTeepcards ($filtro=null, $valor=null) {
+		$from = 'info';
+		$fields = array("id_user");
+		switch ($filtro) {
+			case "name":
+				$where = 'CONCAT(name, " ", surname) LIKE "%'.$valor.'%"';
+				$result = $_SESSION['SO']->select($from, $fields, $where);
+				break;
+			case "domain":
+				$where = 'domain = "'.$valor.'"';
+				$result = $_SESSION['SO']->select($from, $fields, $where);
+				break;
+			default:
+				$result = $_SESSION['SO']->select($from, $fields);
+		}
+		
+		for ($i = 0; $i < $result->num_rows; $i++) {
+			$result->data_seek($i);
+			$row = $result->fetch_assoc();
+			echo '<div class = "medium-3 columns teepcard"><img src = "ajaxRequests.php?action=teepcard&user='.$row['id_user'].'"></div>';
+		}
+	}
 	
 	//FUNCIONES DE LA PILA
 	

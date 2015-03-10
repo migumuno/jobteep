@@ -67,7 +67,8 @@ function showHint(str, foo, div) {
 
 function onAuthLinkedin () {
 	document.getElementById("modalLinkedin").innerHTML = 
-		"<h2>Linkedin</h2><p class=\"lead\">Ya estás conectado/a! Ahora ya puedes importar tus datos.</p>";
+		/*"<h2>Linkedin</h2><p class=\"lead\">Ya estás conectado/a! Ahora ya puedes importar tus datos.</p>";*/
+		"<h2>Linkedin</h2><p class=\"lead\">Ya estás conectado/a! Ahora ya puedes importar tus datos.</p><br><p><button onclick = \"instertData()\" class = \"button\">Importar</button> <button onclick = \"$('#modalLinkedin').foundation('reveal', 'close');\" class = \"button\">Cancelar</button></p>";
 }
 
 /**
@@ -84,7 +85,8 @@ function instertData() {
 		positions = profile.positions;
 		positionCount = positions._total;
 		var allpositions = new Array();
-		for(var i = 0; i < positionCount; i++) {
+		var i;
+		for(i = 0; i < positionCount; i++) {
 			var company = positions.values[i].company.name.replace(/"/g, "");
 			var title = positions.values[i].title.replace(/"/g, "");
 			if (positions.values[i].startDate) {
@@ -117,8 +119,12 @@ function instertData() {
 		educations = profile.educations;
 		educationCount = educations._total;
 		var alleducations = new Array();
-		for(var i = 0; i < educationCount; i++) {
-			var titulation = educations.values[i].degree.replace(/"/g, "");
+		var i;
+		for(i = 0; i < educationCount; i++) {
+			if (typeof educations.values[i].degree == "undefined")
+				var titulation = "No indicado";
+			else
+				var titulation = educations.values[i].degree.replace(/"/g, "");
 			var nameCenter = educations.values[i].schoolName.replace(/"/g, "");
 			if (educations.values[i].startDate)
 				var start = educations.values[i].startDate.year + "-01-01";
@@ -141,7 +147,8 @@ function instertData() {
 		languages = profile.languages;
 		languageCount = languages._total;
 		var alllanguages = new Array();
-		for(var i = 0; i < languageCount; i++) {
+		var i;
+		for(i = 0; i < languageCount; i++) {
 			var name = languages.values[i].language.name.replace(/"/g, "");
 			
 			alllanguages[i] = new Array(name);
@@ -152,7 +159,8 @@ function instertData() {
 		skills = profile.skills;
 		skillCount = skills._total;
 		var allskills = new Array();
-		for(var i = 0; i < skillCount; i++) {
+		var i;
+		for(i = 0; i < skillCount; i++) {
 			var name = skills.values[i].skill.name.replace(/"/g, "");
 			
 			allskills[i] = new Array(name);
@@ -163,9 +171,13 @@ function instertData() {
 		projects = profile.projects;
 		projectCount = projects._total;
 		var allprojects = new Array();
-		for(var i = 0; i < projectCount; i++) {
+		var i;
+		for(i = 0; i < projectCount; i++) {
 			var name = projects.values[i].name.replace(/"/g, "");
-			var description = projects.values[i].description.replace(/"/g, "&amp;quot;").replace(/'/g, "&amp;quot;");
+			if (typeof projects.values[i].description == "undefined")
+				var description = " ";
+			else
+				var description = projects.values[i].description.replace(/"/g, "&amp;quot;").replace(/'/g, "&amp;quot;");
 			
 			allprojects[i] = new Array(name, description);
 		}

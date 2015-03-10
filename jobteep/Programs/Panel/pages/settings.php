@@ -3,7 +3,7 @@ $enum = "settings";
 $controller = $_SESSION['SO']->getController();
 $controller->setEnum($enum);
 $_SESSION['imagePicker'] = $_SESSION['SO']->getUserInfo ('dir');
-$_SESSION['nameImg'] = 'background';
+$_SESSION['nameImg'] = 'teepcardImg';
 ?>
 <div class = "large-10 large-offset-1 columns">
 	<div class = "row">
@@ -17,9 +17,9 @@ $_SESSION['nameImg'] = 'background';
 	<div class = "small-10 small-offset-1 columns panel">
 		<form data-abide method = "post" action = "?program=panel&menu=settings&action=updateElement&id=<?php echo $settings->getId(); ?>">
 			<fieldset>
-			<legend>Elige una plantilla</legend>
+			<legend>Configura tu Teep</legend>
 			<div class = "row">
-				<div class = "large-6 columns">
+				<div class = "small-12 columns">
 					<label>
 		  			<select name = "template">
 		  				<?php 
@@ -34,11 +34,67 @@ $_SESSION['nameImg'] = 'background';
 		  			</select>
 		  			</label>
 				</div>
-				<div class = "large-3 columns end">
+				<div class = "small-12 columns end">
 					<a href = "?program=panel&menu=template&template=<?php echo $settings->get('template') ?>" class = "button">CONFIGURAR</a>
 				</div>
 			</div>
 			</fieldset><br>
+			<?php if ($_SESSION['SO']->getUID() == 1) { ?>
+			<fieldset>
+				<legend>Configura tu Teepcard</legend>
+				<div class = "row">
+					<div class = "medium-12 columns">
+				  		<?php 
+						if ($settings->get('teepcardImg') == '' || is_null($settings->get('teepcardImg')))
+							$img_url = $program->getDir().'img/img_bg.png';
+						else 
+							$img_url = 'Data/Users/'.$_SESSION['SO']->getUserInfo ('dir').'/'.$settings->get('teepcardImg');
+						?>
+						<div class = "medium-3 columns">
+							<label>Fondo Teepcard (Recomendado: 2700x3500, JPG)
+								<img id = "header_img" src = "<?php echo $img_url; ?>" width = "100%">
+								<div class = "row">
+									<div class = "small-12 columns">
+									<br>
+									<div class = "medium-6 columns"><a href="#" data-ip-modal="#headerModal" class="button expand">Subir</a></div>
+									<div class = "medium-6 columns"><a onclick = "document.getElementById('perfil').value = ''; document.getElementById('header_img').src = '<?php echo $program->getDir().'img/img_bg.png' ?>';" class = "button alert expand">Quitar</a></div>
+									<input type = "hidden" name = "teepcardImg" value = "<?php echo $settings->get('teepcardImg'); ?>" id = "perfil">
+									</div>
+								</div>
+							</label>
+						</div>
+						<div class = "medium-9 columns">
+							<div class = "medium-6 columns">
+								<label>Color Texto
+									<select name = "teepcardTxtColor">
+										<option value = "">Por defecto</option>
+										<option value = "blanco" <?php if ($settings->get('teepcardTxtColor') == 'blanco') echo 'selected'; ?>>Blanco</option>
+										<option value = "negro" <?php if ($settings->get('teepcardTxtColor') == 'negro') echo 'selected'; ?>>Negro</option>
+										<option value = "gris" <?php if ($settings->get('teepcardTxtColor') == 'gris') echo 'selected'; ?>>Gris</option>
+									</select>
+								</label>
+							</div>
+							<div class = "medium-6 columns">
+								<label>Fuente
+									<select name = "teepcardFont">
+										<option class = "Sawasdee" value = "">Por defecto</option>
+										<option class = "AlexBrush" value = "AlexBrush.ttf" <?php if ($settings->get('teepcardFont') == 'AlexBrush.ttf') echo 'selected'; ?>>AlexBrush</option>
+										<option class = "ExoRegular" value = "ExoRegular.otf" <?php if ($settings->get('teepcardFont') == 'ExoRegular.otf') echo 'selected'; ?>>ExoRegular</option>
+										<option class = "KaushanScript" value = "KaushanScript.otf" <?php if ($settings->get('teepcardFont') == 'KaushanScript.otf') echo 'selected'; ?>>KaushanScript</option>
+										<option class = "Purisa" value = "Purisa.ttf" <?php if ($settings->get('teepcardFont') == 'Purisa.ttf') echo 'selected'; ?>>Purisa</option>
+										<option class = "QuicksandDash" value = "QuicksandDash.otf" <?php if ($settings->get('teepcardFont') == 'QuicksandDash.otf') echo 'selected'; ?>>QuicksandDash</option>
+									</select>
+								</label>
+							</div>
+							<div class = "medium-6 columns">
+								<label>Tamaño Fuente
+									<input type = "number" name = "teepcardFontSize" value = "<?php echo $settings->get('teepcardFontSize') ?>">
+								</label>
+						</div>
+				  	</div>
+				</div>
+			</fieldset><br>
+			<?php } ?>
 			<fieldset>
 			<legend>Privacidad</legend>
 			<div class = "row">

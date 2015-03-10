@@ -94,14 +94,6 @@
 					    </label>
 					    <small class="error" id = "languageError">Necesitamos saber tus idioma.</small>
 					</div>
-					<div class = "row">
-						<div class="email-field">
-							<label>Email público <span data-tooltip class="has-tip" title="Este email aparecerá en tu perfil de forma pública."><img alt="The Jobfeel" src="Programs/Panel/img/question.png" width = "20px"></span>
-						        <input type = "email" name = "email" id = "email" placeholder="email@email.com"/>
-						    </label>
-						    <small class="error" id = "emailError">El email introducido no es correcto.</small>
-						</div>
-					</div>
 				</div>
 				<div class = "medium-6 columns">
 					<div class = "row">
@@ -110,10 +102,12 @@
 						</label>
 					</div>
 					<div class = "row">
-						<label>Elige tu dominio <span id = "domain_error"></span> <span data-tooltip class="has-tip" title="El dominio es la dirección de tu perfil: www.jobteep.com/dominio"><img alt="The Jobfeel" src="Programs/Panel/img/question.png" width = "20px"></span> <small>requerido</small>
-					        <input type = "text" name = "domain" id = "domain" placeholder="El nombre de tu página" pattern="^[a-z0-9_]*$" required />
-					    </label>
-					    <small class="error" id = "domainError">Necesitamos saber el dominio para que puedan ver tu curriculum. Están permitidas letras minúsculas sin acento, números y _</small>
+						<div class="email-field">
+							<label>Email público <span data-tooltip class="has-tip" title="Este email aparecerá en tu perfil de forma pública."><img alt="The Jobfeel" src="Programs/Panel/img/question.png" width = "20px"></span>
+						        <input type = "email" name = "email" id = "email" placeholder="email@email.com"/>
+						    </label>
+						    <small class="error" id = "emailError">El email introducido no es correcto.</small>
+						</div>
 					</div>
 					<div class = "row">
 						<label>¿Qué estas buscando? <small>Requerido</small>
@@ -131,6 +125,18 @@
 						<label>En dos palabras <small>Importante</small>
 							<input id = "profession" type = "text" name = "profession" placeholder = "Descríbete en dos o tres palabras" id = "profession" />
 						</label>
+					</div>
+				</div>
+				<div class = "small-12 columns">
+					<div class="row collapse">
+						<label>Elige tu dominio <span id = "domain_error"></span> <span data-tooltip class="has-tip" title="El dominio es la dirección de tu perfil: www.jobteep.com/dominio"><img alt="The Jobfeel" src="Programs/Panel/img/question.png" width = "20px"></span> <small>requerido</small></label>
+					    <div class="small-6 columns">
+					      <span class="prefix">www.jobteep.com/</span>
+					    </div>
+					    <div class="small-6 columns">
+					      <input type = "text" name = "domain" id = "domain" placeholder="Elige un dominio" pattern="^[a-z0-9_]*$" required />
+					      <small class="error" id = "domainError">Necesitamos saber el dominio para que puedan ver tu curriculum. Están permitidas letras minúsculas sin acento, números y _</small>
+					    </div>
 					</div>
 				</div>
 			</div>
